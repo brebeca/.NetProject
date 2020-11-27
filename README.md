@@ -1,1 +1,1 @@
-# TSenese - Text Sentiment Analyser
+# TSense - Text Sentiment Analyser
