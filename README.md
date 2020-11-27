@@ -1,0 +1,1 @@
+# TSenese - Text Sentiment Analyser
