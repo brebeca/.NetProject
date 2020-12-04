@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSense", "TSense\TSense.csproj", "{260DCB03-7D90-4909-9191-AA53F524CB66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSense", "TSense\TSense.csproj", "{E92F2FF1-850D-4DFB-A725-EEB4F94218A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSense_API", "TSense_API\TSense_API.csproj", "{05BA88EA-0D7E-4FD0-B259-C4E0764C4D2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{260DCB03-7D90-4909-9191-AA53F524CB66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{260DCB03-7D90-4909-9191-AA53F524CB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{260DCB03-7D90-4909-9191-AA53F524CB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{260DCB03-7D90-4909-9191-AA53F524CB66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E92F2FF1-850D-4DFB-A725-EEB4F94218A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E92F2FF1-850D-4DFB-A725-EEB4F94218A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E92F2FF1-850D-4DFB-A725-EEB4F94218A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E92F2FF1-850D-4DFB-A725-EEB4F94218A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05BA88EA-0D7E-4FD0-B259-C4E0764C4D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05BA88EA-0D7E-4FD0-B259-C4E0764C4D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05BA88EA-0D7E-4FD0-B259-C4E0764C4D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05BA88EA-0D7E-4FD0-B259-C4E0764C4D2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9F9BCE82-5CB9-4363-A212-850350ABE47F}
+		SolutionGuid = {2B94B0C2-0F43-4FEE-8033-98452785BC12}
 	EndGlobalSection
 EndGlobal
