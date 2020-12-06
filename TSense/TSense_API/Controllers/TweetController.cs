@@ -10,11 +10,11 @@ namespace API.Controllers
     public class TweetController
     {
         [HttpGet]
-        public async Task<string> GetTweetTextAsync(Twitter twitter)
+        public async Task<string> Get(string tweetLink)
         {
             using (var httpClient = new HttpClient())
             {
-                string[] linkList = twitter.Link.Split('/');
+                string[] linkList = tweetLink.Split('/');
                 int index = linkList.Length;
                 string tweetId = linkList[index - 1];
                 string tweetUrl = "https://api.twitter.com/2/tweets/" + tweetId;

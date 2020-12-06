@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSense", "TSense\TSense.csproj", "{E92F2FF1-850D-4DFB-A725-EEB4F94218A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSense_API", "TSense_API\TSense_API.csproj", "{05BA88EA-0D7E-4FD0-B259-C4E0764C4D2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSense_API", "TSense_API\TSense_API.csproj", "{05BA88EA-0D7E-4FD0-B259-C4E0764C4D2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsenseWebApp", "TsenseWebApp\TsenseWebApp.csproj", "{E9CAD950-F05D-44CA-BF99-C2882303CBBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{05BA88EA-0D7E-4FD0-B259-C4E0764C4D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05BA88EA-0D7E-4FD0-B259-C4E0764C4D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05BA88EA-0D7E-4FD0-B259-C4E0764C4D2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9CAD950-F05D-44CA-BF99-C2882303CBBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9CAD950-F05D-44CA-BF99-C2882303CBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9CAD950-F05D-44CA-BF99-C2882303CBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9CAD950-F05D-44CA-BF99-C2882303CBBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

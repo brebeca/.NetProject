@@ -18,3 +18,23 @@ D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TSense_API\obj\
 D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.dll
 D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.pdb
 D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.genruntimeconfig.cache
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.exe
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.deps.json
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.runtimeconfig.json
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.runtimeconfig.dev.json
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.dll
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.pdb
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.csprojAssemblyReference.cache
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.AssemblyInfoInputs.cache
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.AssemblyInfo.cs
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.csproj.CoreCompileInputs.cache
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.RazorTargetAssemblyInfo.cache
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\obj\Debug\netcoreapp3.1\staticwebassets\TSense_API.StaticWebAssets.Manifest.cache
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\obj\Debug\netcoreapp3.1\staticwebassets\TSense_API.StaticWebAssets.xml
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.dll
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.pdb
+C:\Users\ALEX\Desktop\FII\INET\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.genruntimeconfig.cache

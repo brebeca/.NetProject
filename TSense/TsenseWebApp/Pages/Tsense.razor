@@ -1,0 +1,46 @@
+﻿@page "/"
+@using TsenseWebApp.Data
+
+@inject TweetService TService
+
+<h3>Tsense</h3>
+
+<EditForm Model="@tweet" OnSubmit="@OnSubmitLink">
+    <p>
+        <label for="link">Link catre postare: </label>
+        <InputText id="link" @bind-Value="tweet.Link" />
+    </p>
+    <button class="btn-primary" type="submit">Submit</button>
+</EditForm>
+<br />
+<EditForm Model="@tweet">
+    <p>
+        <label for="text">Text: </label>
+        <InputText id="text" @bind-Value="text" />
+    </p>
+    <button class="btn-secondary" type="submit">Submit</button>
+</EditForm>
+
+<div id="tweet">
+    <span id="result">@result</span>
+</div>
+
+<div id="text">
+    <span id="result">@text</span>
+</div>
+
+
+@code {
+
+    Tweet tweet = new Tweet();
+
+    string result;
+
+    string text;
+
+    protected async Task OnSubmitLink()
+    {
+        result = await TService.GetTextFromTweet(tweet.Link);
+    }
+
+}
