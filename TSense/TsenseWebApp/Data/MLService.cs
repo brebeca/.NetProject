@@ -18,7 +18,7 @@ namespace TsenseWebApp.Data
             this._httpClient = httpClient;
         }
 
-        public async Task<string> Post(string text)
+        public async Task<string> SentimentFromLink(string text)
         {
             JObject o = JObject.Parse(text);
             HttpResponseMessage res = await _httpClient.PostAsync("http://localhost:5000/api/v1/predictions", new StringContent(
@@ -29,6 +29,19 @@ namespace TsenseWebApp.Data
             HttpContent content = res.Content;
             string data = await content.ReadAsStringAsync();
             
+            return data;
+        }
+
+        public async Task<string> SentimentFromText(string text)
+        {
+            HttpResponseMessage res = await _httpClient.PostAsync("http://localhost:5000/api/v1/predictions", new StringContent(
+                JsonSerializer.Serialize(new Sentiment(text)),
+                Encoding.UTF8, "application/json"
+               ));
+
+            HttpContent content = res.Content;
+            string data = await content.ReadAsStringAsync();
+
             return data;
         }
     }

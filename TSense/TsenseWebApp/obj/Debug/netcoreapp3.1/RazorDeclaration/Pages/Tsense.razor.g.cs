@@ -104,7 +104,12 @@ using TsenseWebApp.Data;
     protected async Task OnSubmitLink()
     {
         result = await TService.GetTextFromTweet(tweet.Link);
-        sentiment = await MService.Post(result);
+        sentiment = await MService.SentimentFromLink(result);
+    }
+
+    protected async Task OnSubmitText()
+    {
+        sentiment = await MService.SentimentFromText(text);
     }
 
 

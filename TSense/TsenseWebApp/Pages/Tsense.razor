@@ -14,7 +14,7 @@
     <button class="btn-primary" type="submit">Submit</button>
 </EditForm>
 <br />
-<EditForm Model="@tweet">
+<EditForm Model="@tweet" OnSubmit="@OnSubmitText">
     <p>
         <label for="text">Text: </label>
         <InputText id="text" @bind-Value="text" />
@@ -47,7 +47,12 @@
     protected async Task OnSubmitLink()
     {
         result = await TService.GetTextFromTweet(tweet.Link);
-        sentiment = await MService.Post(result);
+        sentiment = await MService.SentimentFromLink(result);
+    }
+
+    protected async Task OnSubmitText()
+    {
+        sentiment = await MService.SentimentFromText(text);
     }
 
 }
