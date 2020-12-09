@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ALEX\\Desktop\\FII\\INET\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {}
+    "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ALEX\\Desktop\\FII\\INET\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {
+    "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALEX\\Desktop\\FII\\INET\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
         "projectName": "TsenseWebApp",
-        "projectPath": "C:\\Users\\ALEX\\Desktop\\FII\\INET\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
-        "packagesPath": "C:\\Users\\ALEX\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALEX\\Desktop\\FII\\INET\\TSense\\TsenseWebApp\\obj\\",
+        "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+        "packagesPath": "C:\\Users\\iRebeca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ALEX\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\iRebeca\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

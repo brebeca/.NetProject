@@ -2,6 +2,7 @@
 @using TsenseWebApp.Data
 
 @inject TweetService TService
+@inject MLService MService
 
 <h3>Tsense</h3>
 
@@ -29,6 +30,10 @@
     <span id="result">@text</span>
 </div>
 
+<div id="sentiment">
+    <span id="result-sentiment">@sentiment</span>
+</div>
+
 
 @code {
 
@@ -37,10 +42,12 @@
     string result;
 
     string text;
+    string sentiment;
 
     protected async Task OnSubmitLink()
     {
         result = await TService.GetTextFromTweet(tweet.Link);
+        sentiment = await MService.Post(result);
     }
 
 }

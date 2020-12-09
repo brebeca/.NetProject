@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using TSense_API.Models;
@@ -23,6 +24,7 @@ namespace API.Controllers
                     request.Headers.TryAddWithoutValidation("Authorization", "Bearer AAAAAAAAAAAAAAAAAAAAAFO6JwEAAAAAx90c8Q%2BhBkRXik%2BwT7Xs%2B8RSaFE%3DmARWn3au4pIFq62bWaCDXMNGT1TGfHfxCA3CqrnOURGadrCUhG");
 
                     var response = await httpClient.SendAsync(request);
+                   
 
                     return response.Content.ReadAsStringAsync().Result;
                 }

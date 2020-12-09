@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "31jt0cUWpdjY0ZbzK2UQs0nuexgvLVwLKyaHupMM0kDMYiPS2RSLe68CQaMMGssmaVTETX26P1ZuL7j4m73LVg==",
+  "dgSpecHash": "3AVDSTLH/AZkrkAe7HkRzElWiJPYm1aCd14W9YZNRRiPOZknERpJuNAUWbBM/zA04fJzONV2EAa9/p5s+ZyRJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ALEX\\Desktop\\FII\\INET\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\iRebeca\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

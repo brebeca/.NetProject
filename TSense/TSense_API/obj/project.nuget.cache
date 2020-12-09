@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xjjABupvTP5LZhUmamCguZ6OPdlbkyRDh6bK4af4vAn9GSZc7cZPOaf1ENKpz/cb+UyV/blflo0SKr8yE0Xl3g==",
+  "dgSpecHash": "GkVeMDbKAM3p9f6dWih3bUT1q2VGGUWIVQywdtdXRTVUS3lbxOBz7WTBTIXFnAqygML/8TbJ7kogdnL5MnhZdw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ALEX\\Desktop\\FII\\INET\\TSense\\TSense_API\\TSense_API.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TSense_API\\TSense_API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\iRebeca\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
