@@ -10,6 +10,9 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
+      },
+      "T4WebFormsInjection/3.0.0": {
+        "type": "package"
       }
     }
   },
@@ -44,27 +47,47 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
+    },
+    "T4WebFormsInjection/3.0.0": {
+      "sha512": "gUz7NsI+CX6MJJNRGDi7RLYA3MkXZ8r+szNHHA+b7ZITpVhK8XpHMN3Clf8A3Wox9ULN8BGN6xmsiyvwkfGhNg==",
+      "type": "package",
+      "path": "t4webformsinjection/3.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/T4WebFormsInjection.DependencyTracker.cs.pp",
+        "Content/T4WebFormsInjection.tt",
+        "t4webformsinjection.3.0.0.nupkg.sha512",
+        "t4webformsinjection.nuspec",
+        "tools/install.ps1"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Newtonsoft.Json >= 12.0.3"
+      "Newtonsoft.Json >= 12.0.3",
+      "T4WebFormsInjection >= 3.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\iRebeca\\.nuget\\packages\\": {}
+    "C:\\Users\\mariu\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\mariu\\Desktop\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
       "projectName": "TsenseWebApp",
-      "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
-      "packagesPath": "C:\\Users\\iRebeca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\obj\\",
+      "projectPath": "C:\\Users\\mariu\\Desktop\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+      "packagesPath": "C:\\Users\\mariu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mariu\\Desktop\\.NetProject\\TSense\\TsenseWebApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\iRebeca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mariu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -76,7 +99,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -88,11 +110,14 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
+          },
+          "T4WebFormsInjection": {
+            "target": "Package",
+            "version": "[3.0.0, )"
           }
         },
         "imports": [
@@ -113,7 +138,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

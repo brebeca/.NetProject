@@ -2,22 +2,136 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-image:url("/css/Images/back.jpg");
+    height:auto;
+    width:auto;
 }
 
 a, .btn-link {
     color: #0366d6;
 }
-
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#alignAll {
+    background: linear-gradient(90deg, rgba(131,58,180,0.4) 0%, rgba(253,29,29,0.8) 50%, rgba(252,176,69,0.3) 100%);
+   
+    padding: 10px;
+}
+#raspunsuri {
+    background: linear-gradient(90deg, rgba(131,58,180,0.4) 0%, rgba(253,29,29,0.8) 50%, rgba(252,176,69,0.3) 100%);
+    padding: 10px;
+}
 .btn-primary {
     color: #fff;
-    background-color: #1b6ec2;
+    background-image: linear-gradient(to right, #478ac9, #e68387);
     border-color: #1861ac;
+    border-radius: 20px;
+    width: 30%;
+    height: auto;
+    padding: 2% 0% 2% 0%;
 }
-
+#boxAll {
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". .";
+}
+#boxImage {
+    width: 70%;
+    padding-left: 30px;
+    height: inherit;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ".";
+}
+#boxTweet {
+    width:90%;
+    padding-left:20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1.2fr 0.1fr 1.2fr;
+    grid-template-areas: "." "." ".";
+}
+.tweetLink {
+    border-color: black;
+    border-radius: 88px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-family: Helvetica;
+    color: #fff;
+    background: blue;
+    padding: 10% 0%;
+    background: linear-gradient(90deg, rgba(131,58,180,0.4) 0%, rgba(253,29,29,0.8) 50%, rgba(252,176,69,0.3) 100%);
+}
+    .tweetLink .tweetLinkOpacity {
+         opacity: 1 !important;
+    }
+#tweetText {
+    border-color: black;
+    border-radius: 88px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-family: Helvetica;
+    color: #fff;
+    background: blue;
+    padding: 10% 0%;
+    background: linear-gradient(90deg, rgba(131,58,180,0.4) 0%, rgba(253,29,29,0.8) 50%, rgba(252,176,69,0.3) 100%);
+}
+.linkText {
+    color: #c9d0d4;
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 29px;
+    font-weight: 100;
+    line-height: 40px;
+    letter-spacing: 1px;
+    padding: 0 0 40px;
+}
+.linkImage {
+    color: #c9d0d4;
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 29px;
+    font-weight: 100;
+    line-height: 40px;
+    letter-spacing: 1px;
+    padding: 0 0 40px;
+}
+.Or {
+    color: #c9d0d4;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 29px;
+    font-weight: 100;
+    line-height: 40px;
+    letter-spacing: 1px;
+   
+}
+.inputLink {
+    padding: 8px;
+    font-size: 19px;
+    width:50%;
+    border-width: 2px;
+    border-color: #CCCCCC;
+    background-color: #f1eaea;
+    color: #000000;
+    border-style: groove;
+    border-radius: 19px;
+    box-shadow: 0px 0px 16px rgba(128,6,6,.59);
+    text-shadow: 0px 0px 5px rgba(0,0,0,.2);
+}
 app {
     position: relative;
     display: flex;
     flex-direction: column;
+   
 }
 
 .top-row {
@@ -28,6 +142,8 @@ app {
 
 .main {
     flex: 1;
+    height:auto;
+    
 }
 
     .main .top-row {
@@ -99,6 +215,8 @@ app {
 
 .content {
     padding-top: 1.1rem;
+    height: auto;
+    width:auto;
 }
 
 .navbar-toggler {

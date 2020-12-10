@@ -4,35 +4,85 @@
 @inject TweetService TService
 @inject MLService MService
 
-<h3>Tsense</h3>
+<div id="boxAll">
+    <div id="boxImage">
 
-<EditForm Model="@tweet" OnSubmit="@OnSubmitLink">
-    <p>
-        <label for="link">Link catre postare: </label>
-        <InputText id="link" @bind-Value="tweet.Link" />
-    </p>
-    <button class="btn-primary" type="submit">Submit</button>
-</EditForm>
-<br />
-<EditForm Model="@tweet" OnSubmit="@OnSubmitText">
-    <p>
-        <label for="text">Text: </label>
-        <InputText id="text" @bind-Value="text" />
-    </p>
-    <button class="btn-secondary" type="submit">Submit</button>
-</EditForm>
 
-<div id="tweet">
-    <span id="result">@result</span>
+        @if (@ShowImage)
+        {
+            <div id="alignAll">
+                <img src="/css/Images/emoji.jpg" class="image" alt="Sample Image" width="70%" />
+                <p class="linkImage">videe+Check your vibe!+Descriere </p>
+            </div>
+        }
+        else
+        {
+            <div id="raspunsuri">
+
+                @if (@sentiment.Equals(@"Positive"))
+                {
+                    <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
+                }
+                else
+                {
+                    <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
+                }
+                @if (@selection==0)
+                {
+                    <div id="tweet">
+                        <span id="result">@result</span>
+                    </div>
+
+                    <div id="sentiment">
+                        <span>Your vibe:</span>
+                        <span id="result-sentiment">@sentiment</span>
+                    </div>
+                    }
+                else
+                {
+                    <div id="text">
+                        <span>Your text:</span>
+                        <span id="result">@text</span>
+                    </div>
+                    <div id="sentiment">
+                        <span>Your vibe:</span>
+                        <span id="result-sentiment">@sentiment</span>
+                    </div>
+                }
+
+            </div>
+        }
+
+
+    </div>
+    <div id="boxTweet">
+        <EditForm Model="@tweet"><p class="Or">Option1</p></EditForm>
+        <div class="tweetLink">
+
+            <EditForm Model="@tweet" OnSubmit="@OnSubmitLink">
+                <p>
+                    <label class="linkText" for="link">Link: </label>
+                    <InputText class="inputLink" id="link" @bind-Value="tweet.Link" />
+                </p>
+                <button class="btn-primary" type="submit">Submit</button>
+            </EditForm>
+        </div>
+
+        <EditForm Model="@tweet"><p class="Or">Option2</p></EditForm>
+        <div id="tweetText">
+            <EditForm Model="@tweet" OnSubmit="@OnSubmitText">
+                <p>
+                    <label class="linkText" for="text">Text: </label>
+                    <InputText class="inputLink" id="text" @bind-Value="text" />
+                </p>
+                <button class="btn-primary" type="submit">Submit</button>
+            </EditForm>
+        </div>
+    </div>
 </div>
 
-<div id="text">
-    <span id="result">@text</span>
-</div>
 
-<div id="sentiment">
-    <span id="result-sentiment">@sentiment</span>
-</div>
+
 
 
 @code {
@@ -40,19 +90,26 @@
     Tweet tweet = new Tweet();
 
     string result;
-
     string text;
     string sentiment;
+    Boolean ShowImage = true;
+    int selection;
 
     protected async Task OnSubmitLink()
     {
         result = await TService.GetTextFromTweet(tweet.Link);
         sentiment = await MService.SentimentFromLink(result);
+        text = "";
+        ShowImage = false;
+        selection = 0;
     }
 
     protected async Task OnSubmitText()
     {
+        result = "";
         sentiment = await MService.SentimentFromText(text);
+        ShowImage = false;
+        selection = 1;
     }
 
 }

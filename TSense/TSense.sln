@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSense_API", "TSense_API\TS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TsenseWebApp", "TsenseWebApp\TsenseWebApp.csproj", "{E9CAD950-F05D-44CA-BF99-C2882303CBBB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ML-Server", "..\..\..\..\source\repos\ML-Server\ML-Server\ML-Server.csproj", "{BF573F6E-2A07-4A52-A492-215933535D00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ML-Server", "ML-Server\ML-Server.csproj", "{97ADD8D1-A9C3-44F3-938B-9BC88751CBC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{E9CAD950-F05D-44CA-BF99-C2882303CBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9CAD950-F05D-44CA-BF99-C2882303CBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9CAD950-F05D-44CA-BF99-C2882303CBBB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF573F6E-2A07-4A52-A492-215933535D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF573F6E-2A07-4A52-A492-215933535D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF573F6E-2A07-4A52-A492-215933535D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF573F6E-2A07-4A52-A492-215933535D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97ADD8D1-A9C3-44F3-938B-9BC88751CBC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97ADD8D1-A9C3-44F3-938B-9BC88751CBC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97ADD8D1-A9C3-44F3-938B-9BC88751CBC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97ADD8D1-A9C3-44F3-938B-9BC88751CBC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

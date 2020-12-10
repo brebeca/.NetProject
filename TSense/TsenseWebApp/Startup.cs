@@ -28,7 +28,7 @@ namespace TsenseWebApp
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
+            
 
             services.AddHttpClient<TweetService>(client => {
 

@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {}
+    "C:\\Users\\mariu\\Desktop\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {
+    "C:\\Users\\mariu\\Desktop\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\mariu\\Desktop\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
         "projectName": "TsenseWebApp",
-        "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
-        "packagesPath": "C:\\Users\\iRebeca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iRebeca\\facultate\\.NET\\PROIECT\\TSense\\TsenseWebApp\\obj\\",
+        "projectPath": "C:\\Users\\mariu\\Desktop\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+        "packagesPath": "C:\\Users\\mariu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mariu\\Desktop\\.NetProject\\TSense\\TsenseWebApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\iRebeca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mariu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +29,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,11 +40,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "T4WebFormsInjection": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             }
           },
           "imports": [
@@ -63,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
