@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9kWmnN/NkO+XVLsB+kCetruHn26dfS2GoU8t6bEkQWfYQhDwMeyDtudricIMUOrZXC6HcrQQmORkim/GorCp9Q==",
+  "dgSpecHash": "1+f+b1bXF6vgBwCWlxlJHMQs+HV5RG+StjMVGdlqQQNLTLsZWhWB7JwJn34WWkpoDEmgt7KupkwjrpNef+hymg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mariu\\Desktop\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj",
+  "projectFilePath": "C:\\Users\\iRebeca\\Source\\Repos\\brebeca\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mariu\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\iRebeca\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\iRebeca\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\iRebeca\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

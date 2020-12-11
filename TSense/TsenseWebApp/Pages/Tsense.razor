@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using TsenseWebApp.Data
+@using Newtonsoft.Json.Linq;
 
 @inject TweetService TService
 @inject MLService MService
@@ -17,40 +18,43 @@
         }
         else
         {
-            <div id="raspunsuri">
+    <div id="raspunsuri">
 
-                @if (@sentiment.Equals(@"Positive"))
-                {
-                    <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
-                }
-                else
-                {
-                    <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
-                }
-                @if (@selection==0)
-                {
-                    <div id="tweet">
-                        <span id="result">@result</span>
-                    </div>
-
-                    <div id="sentiment">
-                        <span>Your vibe:</span>
-                        <span id="result-sentiment">@sentiment</span>
-                    </div>
-                    }
-                else
-                {
-                    <div id="text">
-                        <span>Your text:</span>
-                        <span id="result">@text</span>
-                    </div>
-                    <div id="sentiment">
-                        <span>Your vibe:</span>
-                        <span id="result-sentiment">@sentiment</span>
-                    </div>
-                }
-
+        @if (@sentiment.Equals(true))
+        {
+            <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
+        }
+        else
+        {
+            <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
+        }
+        @if (@selection == 0)
+        {
+            <div id="tweet">
+                <span id="result">@result</span>
             </div>
+
+            <div id="sentiment">
+                <span>Your vibe:</span>
+                <span id="result-sentiment">@sentiment</span>
+            </div>
+        }
+        else
+        {
+            <div id="text">
+                <span>Your text:</span>
+                <span id="result">@text</span>
+            </div>
+            <div id="sentiment">
+                <span>Your vibe:</span>
+                <span id="result-sentiment">@sentiment</span>
+            </div>
+        }
+        <div id="text">
+            <span>With probaility:</span>
+            <span id="result-prob">@probability</span>
+        </div>
+    </div>
         }
 
 
@@ -91,14 +95,18 @@
 
     string result;
     string text;
-    string sentiment;
+    bool sentiment=true;
     Boolean ShowImage = true;
     int selection;
+    double probability = 0;
 
     protected async Task OnSubmitLink()
     {
         result = await TService.GetTextFromTweet(tweet.Link);
-        sentiment = await MService.SentimentFromLink(result);
+        JObject mlPrediction = await MService.SentimentFromLink(result);
+        sentiment = (bool)(mlPrediction)["prediction"];
+        probability = (double)(mlPrediction)["probability"];
+
         text = "";
         ShowImage = false;
         selection = 0;
@@ -106,8 +114,10 @@
 
     protected async Task OnSubmitText()
     {
+        JObject mlPrediction = await MService.SentimentFromText(text);
         result = "";
-        sentiment = await MService.SentimentFromText(text);
+        sentiment=(bool)(mlPrediction)["prediction"];
+        probability = (double)(mlPrediction)["probability"];
         ShowImage = false;
         selection = 1;
     }

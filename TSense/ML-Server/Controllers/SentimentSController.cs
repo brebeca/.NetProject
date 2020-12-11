@@ -1,11 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.ML;
 using ML_Server.DataModels;
+using System;
 
 namespace ML_Server.Controllers
 {
@@ -20,17 +16,17 @@ namespace ML_Server.Controllers
         }
 
         [HttpPost]
-        public ActionResult<string> Post([FromBody] SentimentData data)
+        public ActionResult<SentimentPrediction> Post([FromBody] SentimentData data)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
 
             SentimentPrediction predictedValue = PredictionEnginePool.Predict(modelName: "SentimentAnalisys", example: data);
-            string sentiment = Convert.ToBoolean(predictedValue.Prediction) ? "Positive" : "Negative";
-            return Ok(sentiment);
+           // string sentiment = Convert.ToBoolean(predictedValue.Prediction) ? "Positive" : "Negative";
+            return Ok(predictedValue);
         }
-       
+
     }
 }

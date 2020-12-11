@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace TsenseWebApp.Data
+﻿namespace TsenseWebApp.Data
 {
     public class Sentiment
     {
@@ -12,6 +7,6 @@ namespace TsenseWebApp.Data
         {
             SentimentText = sentimentText;
         }
-       
+
     }
 }

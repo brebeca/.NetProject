@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json.Linq;
 using System.Net.Http;
-using System.Text.Json;
 using System.Text;
-using Newtonsoft.Json.Linq;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace TsenseWebApp.Data
 {
@@ -18,21 +15,7 @@ namespace TsenseWebApp.Data
             this._httpClient = httpClient;
         }
 
-        public async Task<string> SentimentFromLink(string text)
-        {
-            JObject o = JObject.Parse(text);
-            HttpResponseMessage res = await _httpClient.PostAsync("http://localhost:5000/api/v1/predictions", new StringContent(
-                JsonSerializer.Serialize(new Sentiment((string)o["data"]["text"])),
-                Encoding.UTF8,"application/json"
-               ));
-
-            HttpContent content = res.Content;
-            string data = await content.ReadAsStringAsync();
-            
-            return data;
-        }
-
-        public async Task<string> SentimentFromText(string text)
+        public async Task<JObject> SentimentFromLink(string text)
         {
             HttpResponseMessage res = await _httpClient.PostAsync("http://localhost:5000/api/v1/predictions", new StringContent(
                 JsonSerializer.Serialize(new Sentiment(text)),
@@ -40,7 +23,20 @@ namespace TsenseWebApp.Data
                ));
 
             HttpContent content = res.Content;
-            string data = await content.ReadAsStringAsync();
+            JObject data = JObject.Parse(await content.ReadAsStringAsync());
+
+            return data;
+        }
+
+        public async Task<JObject> SentimentFromText(string text)
+        {
+            HttpResponseMessage res = await _httpClient.PostAsync("http://localhost:5000/api/v1/predictions", new StringContent(
+                JsonSerializer.Serialize(new Sentiment(text)),
+                Encoding.UTF8, "application/json"
+               ));
+
+            HttpContent content = res.Content;
+            JObject data = JObject.Parse(await content.ReadAsStringAsync());
 
             return data;
         }

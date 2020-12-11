@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace TSense_API.Models
+﻿namespace TSense_API.Models
 {
     public class Twitter
     {

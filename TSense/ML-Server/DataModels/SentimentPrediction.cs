@@ -3,7 +3,7 @@ using Microsoft.ML.Data;
 
 namespace ML_Server.DataModels
 {
-    public class SentimentPrediction :SentimentData
+    public class SentimentPrediction : SentimentData
     {
         [ColumnName("PredictedLabel")]
         public bool Prediction { get; set; }
