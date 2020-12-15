@@ -1,15 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using TSense_API.Models;
 
 namespace API.Controllers
 {
     [ApiController]
-    [Route("api/tweet")]
+    [Route("twitter_api/")]
     public class TweetController
     {
-        [HttpGet]
+        Token token = new Token();
+
+        [HttpGet("tweet")]
         public async Task<string> Get(string tweetLink)
         {
             using (var httpClient = new HttpClient())
@@ -20,12 +25,39 @@ namespace API.Controllers
                 string tweetUrl = "https://api.twitter.com/2/tweets/" + tweetId;
                 using (var request = new HttpRequestMessage(new HttpMethod("GET"), tweetUrl))
                 {
-                    request.Headers.TryAddWithoutValidation("Authorization", "Bearer AAAAAAAAAAAAAAAAAAAAAFO6JwEAAAAAx90c8Q%2BhBkRXik%2BwT7Xs%2B8RSaFE%3DmARWn3au4pIFq62bWaCDXMNGT1TGfHfxCA3CqrnOURGadrCUhG");
+                    request.Headers.TryAddWithoutValidation("Authorization", "Bearer " + token.BearerToken);
 
                     var response = await httpClient.SendAsync(request);
 
                     return (string)JObject.Parse(response.Content.ReadAsStringAsync().Result)["data"]["text"];
                 }
+            }
+        }
+
+        [HttpGet("tweet_all")]
+        public async Task<string> GetAll(string username)
+        {
+            List<string> resultArray = new List<string>();
+            using (var httpClient = new HttpClient())
+            {
+                for (int i = 1; i <= 16; i++)
+                {
+                    string twitterUrl = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + 
+                        username + "&exclude_replies=true&include_rts=false&count=200&page=" + i;
+                    using (var request = new HttpRequestMessage(new HttpMethod("GET"), twitterUrl))
+                    {
+                        request.Headers.TryAddWithoutValidation("Authorization", "Bearer " + token.BearerToken);
+
+                        var response = await httpClient.SendAsync(request);
+                        var tweetsArray = JArray.Parse(response.Content.ReadAsStringAsync().Result);
+                        foreach (var element in tweetsArray)
+                        {
+                            resultArray.Add((string)element["text"]);
+                        }
+                        
+                    }
+                }
+                return JsonConvert.SerializeObject(resultArray);
             }
         }
     }

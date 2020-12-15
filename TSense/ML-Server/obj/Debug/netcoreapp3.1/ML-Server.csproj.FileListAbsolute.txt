@@ -124,3 +124,45 @@ C:\Users\iRebeca\Source\Repos\brebeca\.NetProject\TSense\ML-Server\obj\Debug\net
 C:\Users\iRebeca\Source\Repos\brebeca\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.dll
 C:\Users\iRebeca\Source\Repos\brebeca\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.pdb
 C:\Users\iRebeca\Source\Repos\brebeca\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.genruntimeconfig.cache
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\ML-Server.exe
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\ML-Server.deps.json
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\ML-Server.runtimeconfig.json
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\ML-Server.runtimeconfig.dev.json
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\ML-Server.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\ML-Server.pdb
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.ML.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Microsoft.ML.Core.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Microsoft.ML.Data.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Microsoft.ML.KMeansClustering.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Microsoft.ML.PCA.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Microsoft.ML.StandardTrainers.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Microsoft.ML.Transforms.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Microsoft.ML.CpuMath.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Microsoft.ML.DataView.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libLdaNative.so
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libLdaNative.dylib
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\LdaNative.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\LdaNative.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.csprojAssemblyReference.cache
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.AssemblyInfoInputs.cache
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.AssemblyInfo.cs
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.csproj.CoreCompileInputs.cache
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.MvcApplicationPartsAssemblyInfo.cs
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.MvcApplicationPartsAssemblyInfo.cache
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\staticwebassets\ML-Server.StaticWebAssets.Manifest.cache
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\staticwebassets\ML-Server.StaticWebAssets.xml
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\scopedcss\bundle\ML-Server.styles.css
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.RazorTargetAssemblyInfo.cache
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.csproj.CopyComplete
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.pdb
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.genruntimeconfig.cache

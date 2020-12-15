@@ -104,3 +104,5 @@ C:\Users\iRebeca\Source\Repos\brebeca\.NetProject\TSense\TSense_API\obj\Debug\ne
 C:\Users\iRebeca\Source\Repos\brebeca\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.dll
 C:\Users\iRebeca\Source\Repos\brebeca\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.pdb
 C:\Users\iRebeca\Source\Repos\brebeca\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.genruntimeconfig.cache
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.csproj.CopyComplete
