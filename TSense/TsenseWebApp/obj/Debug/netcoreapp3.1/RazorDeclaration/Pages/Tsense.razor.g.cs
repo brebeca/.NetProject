@@ -13,77 +13,77 @@ namespace TsenseWebApp.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 1 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 2 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 3 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 4 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 5 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 6 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 7 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 8 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using TsenseWebApp;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 9 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using TsenseWebApp.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
+#line 2 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
 using TsenseWebApp.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
+#line 3 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
 using Newtonsoft.Json.Linq;
 
 #line default
@@ -98,14 +98,14 @@ using Newtonsoft.Json.Linq;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 92 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
+#line 92 "C:\Users\iRebeca\facultate\.NET\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
        
 
     Tweet tweet = new Tweet();
-
-    string result;
-    string text;
-    bool sentiment=true;
+    string user = "";
+    string result="";
+    string text="";
+    bool sentiment = true;
     Boolean ShowImage = true;
     int selection;
     double probability = 0;
@@ -126,7 +126,18 @@ using Newtonsoft.Json.Linq;
     {
         JObject mlPrediction = await MService.SentimentFromText(text);
         result = "";
-        sentiment=(bool)(mlPrediction)["prediction"];
+        sentiment = (bool)(mlPrediction)["prediction"];
+        probability = (double)(mlPrediction)["probability"];
+        ShowImage = false;
+        selection = 1;
+    }
+
+    protected async Task OnSubmitUser()
+    {
+        //"Huawei" se va inlocui cu usernameul introdus
+        List<string> tweets = await TService.GetTweetsFromUser("Huawei");
+        JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
+        sentiment = (bool)(mlPrediction)["prediction"];
         probability = (double)(mlPrediction)["probability"];
         ShowImage = false;
         selection = 1;

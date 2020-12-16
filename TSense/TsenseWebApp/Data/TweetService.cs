@@ -1,4 +1,6 @@
-﻿using System.Net.Http;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace TsenseWebApp.Data
@@ -18,10 +20,10 @@ namespace TsenseWebApp.Data
             return await httpClient.GetStringAsync(url);
         }
 
-        public async Task<string> GetTweetsFromUser(string username)
+        public async Task<List<string>> GetTweetsFromUser(string username)
         {
             string url = "twitter_api/tweet_all?username=" + username;
-            return await httpClient.GetStringAsync(url);
+            return JsonConvert.DeserializeObject<List<string>>( await httpClient.GetStringAsync(url));
         }
     }
 }

@@ -18,43 +18,43 @@
         }
         else
         {
-    <div id="raspunsuri">
+            <div id="raspunsuri">
 
-        @if (@sentiment.Equals(true))
-        {
-            <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
-        }
-        else
-        {
-            <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
-        }
-        @if (@selection == 0)
-        {
-            <div id="tweet">
-                <span id="result">@result</span>
-            </div>
+                @if (@sentiment.Equals(true))
+                {
+                    <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
+                }
+                else
+                {
+                    <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
+                }
+                @if (@selection == 0)
+                {
+                    <div id="tweet">
+                        <span id="result">@result</span>
+                    </div>
 
-            <div id="sentiment">
-                <span>Your vibe:</span>
-                <span id="result-sentiment">@sentiment</span>
+                    <div id="sentiment">
+                        <span>Your vibe:</span>
+                        <span id="result-sentiment">@sentiment</span>
+                    </div>
+                }
+                else
+                {
+                    <div id="text">
+                        <span>Your text:</span>
+                        <span id="result">@text</span>
+                    </div>
+                    <div id="sentiment">
+                        <span>Your vibe:</span>
+                        <span id="result-sentiment">@sentiment</span>
+                    </div>
+                }
+                <div id="text">
+                    <span>With probaility:</span>
+                    <span id="result-prob">@probability</span>
+                </div>
             </div>
-        }
-        else
-        {
-            <div id="text">
-                <span>Your text:</span>
-                <span id="result">@text</span>
-            </div>
-            <div id="sentiment">
-                <span>Your vibe:</span>
-                <span id="result-sentiment">@sentiment</span>
-            </div>
-        }
-        <div id="text">
-            <span>With probaility:</span>
-            <span id="result-prob">@probability</span>
-        </div>
-    </div>
         }
 
 
@@ -92,10 +92,10 @@
 @code {
 
     Tweet tweet = new Tweet();
-
-    string result;
-    string text;
-    bool sentiment=true;
+    string user = "";
+    string result="";
+    string text="";
+    bool sentiment = true;
     Boolean ShowImage = true;
     int selection;
     double probability = 0;
@@ -116,10 +116,20 @@
     {
         JObject mlPrediction = await MService.SentimentFromText(text);
         result = "";
-        sentiment=(bool)(mlPrediction)["prediction"];
+        sentiment = (bool)(mlPrediction)["prediction"];
         probability = (double)(mlPrediction)["probability"];
         ShowImage = false;
         selection = 1;
+    }
+
+    protected async Task OnSubmitUser()
+    {
+        //"Huawei" se va inlocui cu usernameul introdus
+        List<string> tweets = await TService.GetTweetsFromUser("Huawei");
+        JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
+        sentiment = (bool)(mlPrediction)["prediction"];
+        probability = (double)(mlPrediction)["probability"];
+      
     }
 
 }
