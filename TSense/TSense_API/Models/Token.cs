@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Configuration;
 
 namespace TSense_API.Models
 {
@@ -10,7 +7,7 @@ namespace TSense_API.Models
         public readonly string BearerToken;
         public Token()
         {
-            BearerToken = "AAAAAAAAAAAAAAAAAAAAAFO6JwEAAAAAx90c8Q%2BhBkRXik%2BwT7Xs%2B8RSaFE%3DmARWn3au4pIFq62bWaCDXMNGT1TGfHfxCA3CqrnOURGadrCUhG";
+            BearerToken = ConfigurationManager.AppSettings.Get("BearerToken");
         }
     }
 }

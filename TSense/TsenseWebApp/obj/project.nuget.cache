@@ -1,13 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "AwseRcFUyhSKL55wIDeTNNUt8F5c3iFg3cZTs52RMFb4fUyk9Eamc0Q/JbVO1/6+moJpONmhhnvBb3GSYzvBdg==",
+  "dgSpecHash": "SkoaxYN4DHBTe47bwEESytIFe66teR0Q/9Q/2magYmWIvHYAtPiOoOwv6kgJhdFqJ50AAtQ4GQ+U63gPx+wgTw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\iRebeca\\facultate\\.NET\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+  "projectFilePath": "C:\\NET\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\iRebeca\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\iRebeca\\.nuget\\packages\\t4webformsinjection\\3.0.0\\t4webformsinjection.3.0.0.nupkg.sha512",
-    "C:\\Users\\iRebeca\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\iRebeca\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+    "C:\\Users\\Eu\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Eu\\.nuget\\packages\\t4webformsinjection\\3.0.0\\t4webformsinjection.3.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -5973,19 +5973,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\iRebeca\\.nuget\\packages\\": {}
+    "C:\\Users\\Eu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iRebeca\\facultate\\.NET\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj",
+      "projectUniqueName": "C:\\NET\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj",
       "projectName": "ML-Server",
-      "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj",
-      "packagesPath": "C:\\Users\\iRebeca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iRebeca\\facultate\\.NET\\.NetProject\\TSense\\ML-Server\\obj\\",
+      "projectPath": "C:\\NET\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj",
+      "packagesPath": "C:\\Users\\Eu\\.nuget\\packages\\",
+      "outputPath": "C:\\NET\\.NetProject\\TSense\\ML-Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\iRebeca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6030,16 +6030,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.10, 3.1.10]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6048,7 +6038,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

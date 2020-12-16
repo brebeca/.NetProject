@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using TSense_API.Models;
+using System.Configuration;
 
 namespace API.Controllers
 {
@@ -22,7 +23,7 @@ namespace API.Controllers
                 string[] linkList = tweetLink.Split('/');
                 int index = linkList.Length;
                 string tweetId = linkList[index - 1];
-                string tweetUrl = "https://api.twitter.com/2/tweets/" + tweetId;
+                string tweetUrl = ConfigurationManager.AppSettings.Get("tweetUrl") + tweetId;
                 using (var request = new HttpRequestMessage(new HttpMethod("GET"), tweetUrl))
                 {
                     request.Headers.TryAddWithoutValidation("Authorization", "Bearer " + token.BearerToken);
@@ -42,7 +43,7 @@ namespace API.Controllers
             {
                 for (int i = 1; i <= 16; i++)
                 {
-                    string twitterUrl = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + 
+                    string twitterUrl = ConfigurationManager.AppSettings.Get("twitterUrl") + 
                         username + "&exclude_replies=true&include_rts=false&count=200&page=" + i;
                     using (var request = new HttpRequestMessage(new HttpMethod("GET"), twitterUrl))
                     {
