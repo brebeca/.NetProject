@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\NET\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj": {}
+    "C:\\Users\\ALEX\\Desktop\\FII\\INET\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj": {}
   },
   "projects": {
-    "C:\\NET\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj": {
+    "C:\\Users\\ALEX\\Desktop\\FII\\INET\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NET\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj",
+        "projectUniqueName": "C:\\Users\\ALEX\\Desktop\\FII\\INET\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj",
         "projectName": "TSense_API",
-        "projectPath": "C:\\NET\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj",
-        "packagesPath": "C:\\Users\\Eu\\.nuget\\packages\\",
-        "outputPath": "C:\\NET\\.NetProject\\TSense\\TSense_API\\obj\\",
+        "projectPath": "C:\\Users\\ALEX\\Desktop\\FII\\INET\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj",
+        "packagesPath": "C:\\Users\\ALEX\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ALEX\\Desktop\\FII\\INET\\.NetProject\\TSense\\TSense_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Eu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ALEX\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
@@ -67,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

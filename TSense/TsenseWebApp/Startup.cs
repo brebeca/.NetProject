@@ -1,3 +1,4 @@
+using MatBlazor;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,7 +24,7 @@ namespace TsenseWebApp
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-
+            services.AddMatBlazor();
 
             services.AddHttpClient<TweetService>(client =>
             {

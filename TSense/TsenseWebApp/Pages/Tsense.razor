@@ -5,86 +5,143 @@
 @inject TweetService TService
 @inject MLService MService
 
-<div id="boxAll">
-    <div id="boxImage">
-
-
-        @if (@ShowImage)
-        {
-            <div id="alignAll">
-                <img src="/css/Images/emoji.jpg" class="image" alt="Sample Image" width="70%" />
-                <p class="linkImage">videe+Check your vibe!+Descriere </p>
-            </div>
-        }
-        else
-        {
-            <div id="raspunsuri">
-
-                @if (@sentiment.Equals(true))
-                {
-                    <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
-                }
-                else
-                {
-                    <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="70%" />
-                }
-                @if (@selection == 0)
-                {
-                    <div id="tweet">
-                        <span id="result">@result</span>
+<div class="mat-layout-grid mat-layout-grid-align-left">
+    <div class="mat-layout-grid-inner">
+        <div class="mat-layout-grid-cell">
+            <MatCard Style="width: 400px; min-height: 600px; height:auto;" class="demo-mat-card">
+                <MatHeadline6>Option 1</MatHeadline6>
+                <MatCardContent>
+                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column" class="demo-mat-card-content">
+                        <MatBody1>
+                            <EditForm Model="tweet" OnSubmit="OnSubmitLink">
+                                <MatTextField ValidationDisabled="true" Label="Link to Tweet" @bind-Value="tweet.Link" />
+                                <br />
+                                <MatButton Style="float: right" Icon="fingerprint" Type="submit" Raised="true">Submit!</MatButton>
+                            </EditForm>
+                        </MatBody1>
+                        <br />
+                        <MatBody1 Style="width: 300px; padding-right: 3%; padding-left: 3%">
+                            @if (ShowImage1 == false)
+                            {
+                                <div id="text">
+                                    <MatHeadline6 class="demo-mat-card-clean-margin">Your text</MatHeadline6>
+                                    <span id="result">@result</span>
+                                </div>
+                                <br />
+                                <div id="text">
+                                    <MatHeadline6 class="demo-mat-card-clean-margin">With probability: @(probability1*100)%</MatHeadline6>
+                                    <MatProgressBar Progress="@probability1"></MatProgressBar>
+                                </div>
+                                <br />
+                                <div id="sentiment">
+                                    @if (@sentiment1.Equals(true))
+                                    {
+                                        <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                    }
+                                    else
+                                    {
+                                        <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                    }
+                                </div>
+                            }
+                        </MatBody1>
                     </div>
-
-                    <div id="sentiment">
-                        <span>Your vibe:</span>
-                        <span id="result-sentiment">@sentiment</span>
-                    </div>
-                }
-                else
-                {
-                    <div id="text">
-                        <span>Your text:</span>
-                        <span id="result">@text</span>
-                    </div>
-                    <div id="sentiment">
-                        <span>Your vibe:</span>
-                        <span id="result-sentiment">@sentiment</span>
-                    </div>
-                }
-                <div id="text">
-                    <span>With probaility:</span>
-                    <span id="result-prob">@probability</span>
-                </div>
-            </div>
-        }
-
-
-    </div>
-    <div id="boxTweet">
-        <EditForm Model="@tweet"><p class="Or">Option1</p></EditForm>
-        <div class="tweetLink">
-
-            <EditForm Model="@tweet" OnSubmit="@OnSubmitLink">
-                <p>
-                    <label class="linkText" for="link">Link: </label>
-                    <InputText class="inputLink" id="link" @bind-Value="tweet.Link" />
-                </p>
-                <button class="btn-primary" type="submit">Submit</button>
-            </EditForm>
+                </MatCardContent>
+            </MatCard>
         </div>
-
-        <EditForm Model="@tweet"><p class="Or">Option2</p></EditForm>
-        <div id="tweetText">
-            <EditForm Model="@tweet" OnSubmit="@OnSubmitText">
-                <p>
-                    <label class="linkText" for="text">Text: </label>
-                    <InputText class="inputLink" id="text" @bind-Value="text" />
-                </p>
-                <button class="btn-primary" type="submit">Submit</button>
-            </EditForm>
+        <div class="mat-layout-grid-cell">
+            <MatCard Style="width: 400px; min-height: 600px; height:auto;" class="demo-mat-card">
+                <MatHeadline6>Option 2</MatHeadline6>
+                <MatCardContent>
+                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column" class="demo-mat-card-content">
+                        <MatBody1>
+                            <EditForm Model="tweet" OnSubmit="OnSubmitText">
+                                <MatTextField ValidationDisabled="true" Label="Insert Text" @bind-Value="text2" />
+                                <br />
+                                <MatButton Style="float: right" Icon="fingerprint" Type="submit" Raised="true">Submit!</MatButton>
+                            </EditForm>
+                        </MatBody1>
+                        <br />
+                        <MatBody1 Style="width: 300px; padding-right: 3%; padding-left: 3%">
+                            @if (ShowImage2 == false)
+                            {
+                                <div id="text">
+                                    <MatHeadline6 class="demo-mat-card-clean-margin">Your text</MatHeadline6>
+                                    <span id="result">@text2</span>
+                                </div>
+                                <br />
+                                <div id="text">
+                                    <MatHeadline6 class="demo-mat-card-clean-margin">With probability: @(probability2*100)%</MatHeadline6>
+                                    <MatProgressBar Progress="@probability2"></MatProgressBar>
+                                </div>
+                                <br />
+                                <div id="sentiment">
+                                    @if (@sentiment2.Equals(true))
+                                    {
+                                        <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                    }
+                                    else
+                                    {
+                                        <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                    }
+                                </div>
+                            }
+                        </MatBody1>
+                    </div>
+                </MatCardContent>
+            </MatCard>
+        </div>
+        <div class="mat-layout-grid-cell">
+            <MatCard Style="width: 400px; min-height: 600px; height:auto;" class="demo-mat-card">
+                <MatHeadline6>Option 2</MatHeadline6>
+                <MatCardContent>
+                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column" class="demo-mat-card-content">
+                        <MatBody1>
+                            <EditForm Model="tweet" OnSubmit="OnSubmitUser">
+                                <MatTextField ValidationDisabled="true" Label="Insert Username" @bind-Value="user" />
+                                <br />
+                                <MatButton Style="float: right" Icon="fingerprint" Type="submit" Raised="true">Submit!</MatButton>
+                            </EditForm>
+                        </MatBody1>
+                        <br />
+                        <MatBody1 Style="width: 300px; padding-right: 3%; padding-left: 3%">
+                            @if (ShowImage3 == false)
+                            {
+                            <div id="text">
+                                <MatHeadline4 class="demo-mat-card-clean-margin">@user's Vibe</MatHeadline4>
+                                @if (@sentiment3.Equals(true))
+                                {
+                                    <MatHeadline6 class="demo-mat-card-clean-margin">Positive!</MatHeadline6>
+                                }
+                                else
+                                {
+                                    <MatHeadline6 class="demo-mat-card-clean-margin">Negative!</MatHeadline6>
+                                }
+                            </div>
+                                <br />
+                                <div id="text">
+                                    <MatHeadline6 class="demo-mat-card-clean-margin">With probability: @(probability3*100)%</MatHeadline6>
+                                    <MatProgressBar Progress="@probability3"></MatProgressBar>
+                                </div>
+                                <br />
+                                <div id="sentiment">
+                                    @if (@sentiment3.Equals(true))
+                                    {
+                                        <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                    }
+                                    else
+                                    {
+                                        <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                    }
+                                </div>
+                            }
+                        </MatBody1>
+                    </div>
+                </MatCardContent>
+            </MatCard>
         </div>
     </div>
 </div>
-
 
 
 
@@ -93,43 +150,52 @@
 
     Tweet tweet = new Tweet();
     string user = "";
-    string result="";
-    string text="";
-    bool sentiment = true;
-    Boolean ShowImage = true;
+    string result = "";
+    string text1 = "";
+    string text2 = "";
+    string text3 = "";
+    bool sentiment1 = true;
+    bool sentiment2 = true;
+    bool sentiment3 = true;
+
+    Boolean ShowImage1 = true;
+    Boolean ShowImage2 = true;
+    Boolean ShowImage3 = true;
     int selection;
-    double probability = 0;
+    double probability1 = 0;
+    double probability2 = 0;
+    double probability3 = 0;
+
 
     protected async Task OnSubmitLink()
     {
         result = await TService.GetTextFromTweet(tweet.Link);
         JObject mlPrediction = await MService.SentimentFromLink(result);
-        sentiment = (bool)(mlPrediction)["prediction"];
-        probability = (double)(mlPrediction)["probability"];
+        sentiment1 = (bool)(mlPrediction)["prediction"];
+        probability1 = Math.Round((double)(mlPrediction)["probability"], 2);
 
-        text = "";
-        ShowImage = false;
+        ShowImage1 = false;
         selection = 0;
     }
 
     protected async Task OnSubmitText()
     {
-        JObject mlPrediction = await MService.SentimentFromText(text);
-        result = "";
-        sentiment = (bool)(mlPrediction)["prediction"];
-        probability = (double)(mlPrediction)["probability"];
-        ShowImage = false;
+        JObject mlPrediction = await MService.SentimentFromText(text2);
+        sentiment2 = (bool)(mlPrediction)["prediction"];
+        probability2 = Math.Round((double)(mlPrediction)["probability"], 2);
+        ShowImage2 = false;
         selection = 1;
     }
 
     protected async Task OnSubmitUser()
     {
         //"Huawei" se va inlocui cu usernameul introdus
-        List<string> tweets = await TService.GetTweetsFromUser("Huawei");
+        List<string> tweets = await TService.GetTweetsFromUser(user);
         JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
-        sentiment = (bool)(mlPrediction)["prediction"];
-        probability = (double)(mlPrediction)["probability"];
-      
+        sentiment3 = (bool)(mlPrediction)["prediction"];
+        probability3 = Math.Round((double)(mlPrediction)["probability"], 2);
+        ShowImage3 = false;
+
     }
 
 }
