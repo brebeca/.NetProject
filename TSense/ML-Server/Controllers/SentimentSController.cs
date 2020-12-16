@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.ML;
 using ML_Server.DataModels;
-using System;
+using System.Configuration;
 using System.Collections.Generic;
 
 namespace ML_Server.Controllers
@@ -24,7 +24,7 @@ namespace ML_Server.Controllers
                 return BadRequest();
             }
 
-            SentimentPrediction predictedValue = PredictionEnginePool.Predict(modelName: "SentimentAnalisys", example: data);
+            SentimentPrediction predictedValue = PredictionEnginePool.Predict(modelName: ConfigurationManager.AppSettings.Get("modelName"), example: data);
             return Ok(predictedValue);
         }
 
@@ -42,7 +42,7 @@ namespace ML_Server.Controllers
             int countNegative = 0;
             foreach (SentimentData data in texts)
             {
-                SentimentPrediction predictedValue = PredictionEnginePool.Predict(modelName: "SentimentAnalisys", example: data);
+                SentimentPrediction predictedValue = PredictionEnginePool.Predict(modelName: ConfigurationManager.AppSettings.Get("modelName"), example: data);
                 if (predictedValue.Sentiment == true) 
                 {
                     probabilityPositive += predictedValue.Probability;

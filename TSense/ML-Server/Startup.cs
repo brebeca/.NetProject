@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.ML;
 using Microsoft.OpenApi.Models;
 using ML_Server.DataModels;
-
+using System.Configuration;
 
 namespace ML_Server
 {
@@ -28,7 +28,7 @@ namespace ML_Server
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
             services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-                .FromFile(modelName: "SentimentAnalisys", filePath: "MlModels/sentiment_model.zip", watchForChanges: true);
+                .FromFile(modelName: ConfigurationManager.AppSettings.Get("modelName"), filePath: ConfigurationManager.AppSettings.Get("filePath"), watchForChanges: true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
