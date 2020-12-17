@@ -325,3 +325,4 @@ C:\Users\ALEX\Desktop\FII\INET\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp
 C:\Users\ALEX\Desktop\FII\INET\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.dll
 C:\Users\ALEX\Desktop\FII\INET\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.pdb
 C:\Users\ALEX\Desktop\FII\INET\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.genruntimeconfig.cache
+C:\NET\.NetProject\TSense\ML-Server\obj\Debug\netcoreapp3.1\ML-Server.csprojAssemblyReference.cache

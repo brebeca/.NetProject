@@ -205,3 +205,4 @@ C:\Users\ALEX\Desktop\FII\INET\.NetProject\TSense\TSense_API\obj\Debug\netcoreap
 C:\Users\ALEX\Desktop\FII\INET\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.dll
 C:\Users\ALEX\Desktop\FII\INET\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.pdb
 C:\Users\ALEX\Desktop\FII\INET\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.genruntimeconfig.cache
+C:\NET\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.csprojAssemblyReference.cache
