@@ -9,9 +9,8 @@
     <div class="mat-layout-grid-inner">
         <div class="mat-layout-grid-cell">
             <MatCard Style="width: 400px; min-height: 600px; height:auto;" class="demo-mat-card">
-                <MatHeadline6>Option 1</MatHeadline6>
-                <MatCardContent>
-                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column" class="demo-mat-card-content">
+                <MatHeadline6 Style="text-align: center">Option 1</MatHeadline6>
+                <MatCardContent Style="display: flex; justify-content: center; align-items: center; flex-direction: column" class="demo-mat-card-content">
                         <MatBody1>
                             <EditForm Model="tweet" OnSubmit="OnSubmitLink">
                                 <MatTextField ValidationDisabled="true" Label="Link to Tweet" @bind-Value="tweet.Link" />
@@ -29,7 +28,7 @@
                                 </div>
                                 <br />
                                 <div id="text">
-                                    <MatHeadline6 class="demo-mat-card-clean-margin">With probability: @(probability1*100)%</MatHeadline6>
+                                    <MatHeadline6 class="demo-mat-card-clean-margin">Positivity: @(probability1*100)%</MatHeadline6>
                                     <MatProgressBar Progress="@probability1"></MatProgressBar>
                                 </div>
                                 <br />
@@ -45,13 +44,12 @@
                                 </div>
                             }
                         </MatBody1>
-                    </div>
                 </MatCardContent>
             </MatCard>
         </div>
         <div class="mat-layout-grid-cell">
             <MatCard Style="width: 400px; min-height: 600px; height:auto;" class="demo-mat-card">
-                <MatHeadline6>Option 2</MatHeadline6>
+                <MatHeadline6 Style="text-align: center">Option 2</MatHeadline6>
                 <MatCardContent>
                     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column" class="demo-mat-card-content">
                         <MatBody1>
@@ -71,7 +69,7 @@
                                 </div>
                                 <br />
                                 <div id="text">
-                                    <MatHeadline6 class="demo-mat-card-clean-margin">With probability: @(probability2*100)%</MatHeadline6>
+                                    <MatHeadline6 class="demo-mat-card-clean-margin">Positivity: @(probability2*100)%</MatHeadline6>
                                     <MatProgressBar Progress="@probability2"></MatProgressBar>
                                 </div>
                                 <br />
@@ -92,8 +90,8 @@
             </MatCard>
         </div>
         <div class="mat-layout-grid-cell">
-            <MatCard Style="width: 400px; min-height: 600px; height:auto;" class="demo-mat-card">
-                <MatHeadline6>Option 3</MatHeadline6>
+            <MatCard Style="width: 400px; min-height: 600px; height:auto;" class="demo-mat-card-clean-margin">
+                <MatHeadline6 Style="text-align: center">Option 3</MatHeadline6>
                 <MatCardContent>
                     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column" class="demo-mat-card-content">
                         <MatBody1>
@@ -120,7 +118,7 @@
                             </div>
                                 <br />
                                 <div id="text">
-                                    <MatHeadline6 class="demo-mat-card-clean-margin">With probability: @(probability3*100)%</MatHeadline6>
+                                    <MatHeadline6 class="demo-mat-card-clean-margin">Positivity: @(probability3*100)%</MatHeadline6>
                                     <MatProgressBar Progress="@probability3"></MatProgressBar>
                                 </div>
                                 <br />
@@ -151,9 +149,7 @@
     Tweet tweet = new Tweet();
     string user = "";
     string result = "";
-    string text1 = "";
     string text2 = "";
-    string text3 = "";
     bool sentiment1 = true;
     bool sentiment2 = true;
     bool sentiment3 = true;
@@ -161,7 +157,6 @@
     Boolean ShowImage1 = true;
     Boolean ShowImage2 = true;
     Boolean ShowImage3 = true;
-    int selection;
     double probability1 = 0;
     double probability2 = 0;
     double probability3 = 0;
@@ -175,7 +170,6 @@
         probability1 = Math.Round((double)(mlPrediction)["probability"], 2);
 
         ShowImage1 = false;
-        selection = 0;
     }
 
     protected async Task OnSubmitText()
@@ -184,7 +178,6 @@
         sentiment2 = (bool)(mlPrediction)["prediction"];
         probability2 = Math.Round((double)(mlPrediction)["probability"], 2);
         ShowImage2 = false;
-        selection = 1;
     }
 
     protected async Task OnSubmitUser()
