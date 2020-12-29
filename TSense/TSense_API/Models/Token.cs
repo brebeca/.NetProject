@@ -1,4 +1,4 @@
-﻿using System.Configuration;
+﻿using TSense_API.Configs;
 
 namespace TSense_API.Models
 {
@@ -7,7 +7,7 @@ namespace TSense_API.Models
         public readonly string BearerToken;
         public Token()
         {
-            BearerToken = ConfigurationManager.AppSettings.Get("BearerToken");
+            BearerToken =Constants.BearerToken ;
         }
     }
 }

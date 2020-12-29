@@ -4,7 +4,8 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using TsenseWebApp.Data;
+using TsenseWebApp.Config;
+using System.Linq;
 
 namespace TsenseWebApp.Data
 {
@@ -33,13 +34,11 @@ namespace TsenseWebApp.Data
        
         public async Task<JObject> SentimentFromMultiple(List<string> texts)
         {
-            List<Sentiment> body = new List<Sentiment>();
-            foreach(string text in texts)
-            {
-                body.Add(new Sentiment(text));
-            }
+            List<Sentiment> body = (from string text in texts
+                                    select new Sentiment(text)).ToList();
 
-            HttpResponseMessage res = await _httpClient.PostAsync("http://localhost:5000/api/v1/predictions/multiple", new StringContent(
+            HttpResponseMessage res = await _httpClient.PostAsync(Constants.MultiplePredictionsUrl,
+                new StringContent(
                 JsonSerializer.Serialize(body),
                 Encoding.UTF8, "application/json"
                ));
@@ -56,7 +55,7 @@ namespace TsenseWebApp.Data
 
         public async Task<JObject> SentimentFromText(string text)
         {
-            HttpResponseMessage res = await _httpClient.PostAsync("http://localhost:5000/api/v1/predictions", new StringContent(
+            HttpResponseMessage res = await _httpClient.PostAsync(Constants.SinglePredictionUrl, new StringContent(
                 JsonSerializer.Serialize(new Sentiment(text)),
                 Encoding.UTF8, "application/json"
                ));

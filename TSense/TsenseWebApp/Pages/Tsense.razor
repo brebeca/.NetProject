@@ -1,6 +1,7 @@
 ﻿@page "/"
 @using TsenseWebApp.Data
 @using Newtonsoft.Json.Linq;
+@using TsenseWebApp.Config;
 
 @inject TweetService TService
 @inject MLService MService
@@ -166,8 +167,8 @@
     {
         result = await TService.GetTextFromTweet(tweet.Link);
         JObject mlPrediction = await MService.SentimentFromLink(result);
-        sentiment1 = (bool)(mlPrediction)["prediction"];
-        probability1 = Math.Round((double)(mlPrediction)["probability"], 2);
+        sentiment1 = (bool)(mlPrediction)[Constants.Prediction];
+        probability1 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
 
         ShowImage1 = false;
     }
@@ -175,8 +176,8 @@
     protected async Task OnSubmitText()
     {
         JObject mlPrediction = await MService.SentimentFromText(text2);
-        sentiment2 = (bool)(mlPrediction)["prediction"];
-        probability2 = Math.Round((double)(mlPrediction)["probability"], 2);
+        sentiment2 = (bool)(mlPrediction)[Constants.Prediction];
+        probability2 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
         ShowImage2 = false;
     }
 
@@ -185,8 +186,8 @@
         //"Huawei" se va inlocui cu usernameul introdus
         List<string> tweets = await TService.GetTweetsFromUser(user);
         JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
-        sentiment3 = (bool)(mlPrediction)["prediction"];
-        probability3 = Math.Round((double)(mlPrediction)["probability"], 2);
+        sentiment3 = (bool)(mlPrediction)[Constants.Prediction];
+        probability3 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
         ShowImage3 = false;
 
     }

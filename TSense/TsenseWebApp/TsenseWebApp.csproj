@@ -5,9 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Config\App.config" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MatBlazor" Version="2.8.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
     <PackageReference Include="T4WebFormsInjection" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Config\App.config" />
   </ItemGroup>
 
 </Project>

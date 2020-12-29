@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using TSense_API.Models;
 using System.Configuration;
+using TSense_API.Configs;
 
 namespace API.Controllers
 {
@@ -20,17 +21,17 @@ namespace API.Controllers
         {
             using (var httpClient = new HttpClient())
             {
-                string[] linkList = tweetLink.Split('/');
-                int index = linkList.Length;
-                string tweetId = linkList[index - 1];
-                string tweetUrl = ConfigurationManager.AppSettings.Get("tweetUrl") + tweetId;
+                string[] linkList = tweetLink.Split(Constants.BackSlash);
+                string tweetId = linkList[linkList.Length - 1];
+                string tweetUrl = Constants.TweetUrl + tweetId;
+
                 using (var request = new HttpRequestMessage(new HttpMethod("GET"), tweetUrl))
                 {
                     request.Headers.TryAddWithoutValidation("Authorization", "Bearer " + token.BearerToken);
 
                     var response = await httpClient.SendAsync(request);
 
-                    return (string)JObject.Parse(response.Content.ReadAsStringAsync().Result)["data"]["text"];
+                    return (string)JObject.Parse(response.Content.ReadAsStringAsync().Result)[Constants.Data][Constants.Text];
                 }
             }
         }
@@ -41,10 +42,14 @@ namespace API.Controllers
             List<string> resultArray = new List<string>();
             using (var httpClient = new HttpClient())
             {
-                for (int i = 1; i <= 16; i++)
+                
+                for (int pageNumber = 1; pageNumber <= Constants.NumberOfPages; pageNumber++)
                 {
-                    string twitterUrl = ConfigurationManager.AppSettings.Get("twitterUrl") + 
-                        username + "&exclude_replies=true&include_rts=false&count=200&page=" + i;
+                    string twitterUrl = Constants.TwitterUrl + 
+                        username +
+                        Constants.GetParameters +
+                        pageNumber;
+
                     using (var request = new HttpRequestMessage(new HttpMethod("GET"), twitterUrl))
                     {
                         request.Headers.TryAddWithoutValidation("Authorization", "Bearer " + token.BearerToken);
@@ -53,7 +58,7 @@ namespace API.Controllers
                         var tweetsArray = JArray.Parse(response.Content.ReadAsStringAsync().Result);
                         foreach (var element in tweetsArray)
                         {
-                            resultArray.Add((string)element["text"]);
+                            resultArray.Add((string)element[Constants.Text]);
                         }
                         
                     }

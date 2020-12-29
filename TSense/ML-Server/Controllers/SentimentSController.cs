@@ -59,7 +59,7 @@ namespace ML_Server.Controllers
             if(probabilityNegative<probabilityPositive)
                 return Ok(new Sentiment(true,probabilityPositive/countPositive));
             else
-                return Ok(new Sentiment(true, probabilityNegative / countNegative));
+                return Ok(new Sentiment(false, probabilityNegative / countNegative));
         }
 
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using TsenseWebApp.Config;
 
 namespace TsenseWebApp.Data
 {
@@ -16,13 +17,13 @@ namespace TsenseWebApp.Data
 
         public async Task<string> GetTextFromTweet(string link)
         {
-            string url = "twitter_api/tweet?tweetLink=" + link;
+            string url =Constants.TweetFromLinkUrl  + link;
             return await httpClient.GetStringAsync(url);
         }
 
         public async Task<List<string>> GetTweetsFromUser(string username)
         {
-            string url = "twitter_api/tweet_all?username=" + username;
+            string url = Constants.TweetsForUserUrl + username;
             return JsonConvert.DeserializeObject<List<string>>( await httpClient.GetStringAsync(url));
         }
     }

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Configs\App.config" />
   </ItemGroup>
 
   <ItemGroup>
