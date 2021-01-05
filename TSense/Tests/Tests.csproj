@@ -13,4 +13,10 @@
     <PackageReference Include="coverlet.collector" Version="1.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ML-Server\ML-Server.csproj" />
+    <ProjectReference Include="..\TsenseWebApp\TsenseWebApp.csproj" />
+    <ProjectReference Include="..\TSense_API\TSense_API.csproj" />
+  </ItemGroup>
+
 </Project>

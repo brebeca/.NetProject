@@ -12,6 +12,7 @@ namespace ML_Server.Controllers
     public class SentimentSController : ControllerBase
     {
         public PredictionEnginePool<SentimentData, SentimentPrediction> PredictionEnginePool { get; }
+
         public SentimentSController(PredictionEnginePool<SentimentData, SentimentPrediction> predictionEnginePool)
         {
             PredictionEnginePool = predictionEnginePool;

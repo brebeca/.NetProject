@@ -9,11 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TsenseWebApp", "TsenseWebAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ML-Server", "ML-Server\ML-Server.csproj", "{97ADD8D1-A9C3-44F3-938B-9BC88751CBC1}"
 EndProject
-<<<<<<< HEAD
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "UnitTests\Testing.csproj", "{962B359A-B918-4254-A3C4-6E823129652B}"
-=======
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{8867E1B3-07E5-4CDC-B419-002B566AC1CB}"
->>>>>>> b7dc13bd7f8cd64351f75a21ff044a9c63a6c47a
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{8867E1B3-07E5-4CDC-B419-002B566AC1CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,17 +29,10 @@ Global
 		{97ADD8D1-A9C3-44F3-938B-9BC88751CBC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97ADD8D1-A9C3-44F3-938B-9BC88751CBC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97ADD8D1-A9C3-44F3-938B-9BC88751CBC1}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
-		{962B359A-B918-4254-A3C4-6E823129652B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{962B359A-B918-4254-A3C4-6E823129652B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{962B359A-B918-4254-A3C4-6E823129652B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{962B359A-B918-4254-A3C4-6E823129652B}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
 		{8867E1B3-07E5-4CDC-B419-002B566AC1CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8867E1B3-07E5-4CDC-B419-002B566AC1CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8867E1B3-07E5-4CDC-B419-002B566AC1CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8867E1B3-07E5-4CDC-B419-002B566AC1CB}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> b7dc13bd7f8cd64351f75a21ff044a9c63a6c47a
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

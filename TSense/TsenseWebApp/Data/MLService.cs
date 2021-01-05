@@ -20,7 +20,7 @@ namespace TsenseWebApp.Data
 
         public async Task<JObject> SentimentFromLink(string text)
         {
-            HttpResponseMessage res = await _httpClient.PostAsync("http://localhost:5000/api/v1/predictions", new StringContent(
+            HttpResponseMessage res = await _httpClient.PostAsync(Constants.SinglePredictionUrl, new StringContent(
                 JsonSerializer.Serialize(new Sentiment(text)),
                 Encoding.UTF8, "application/json"
                ));

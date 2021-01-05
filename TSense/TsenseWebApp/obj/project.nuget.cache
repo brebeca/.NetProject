@@ -1,6 +1,5 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "8MBUE8EP8BJOef2n+5z2xweEjOUWSXRdZDj0eMI15xCI5PcaNqY7mFjorL72m10y+notD5FZk6CLMJF3YlmWbg==",
   "success": true,
   "projectFilePath": "C:\\Users\\iRebeca\\facultate\\.NET\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
@@ -31,27 +30,13 @@
     "C:\\Users\\iRebeca\\.nuget\\packages\\t4webformsinjection\\3.0.0\\t4webformsinjection.3.0.0.nupkg.sha512",
     "C:\\Users\\iRebeca\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
     "C:\\Users\\iRebeca\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
-=======
-  "dgSpecHash": "ZfT9oJeZhReMLAJfIOct8+39cPNqp4xhue3hM5tZRYN37D6iwLQFEvaDbrJIGIO+i28E+CeS+iLYIr0V3lI6sQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Eu\\source\\repos\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Eu\\.nuget\\packages\\matblazor\\2.8.0\\matblazor.2.8.0.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.10\\microsoft.aspnetcore.authorization.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.10\\microsoft.aspnetcore.components.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.10\\microsoft.aspnetcore.components.analyzers.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\3.1.10\\microsoft.aspnetcore.components.forms.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.aspnetcore.components.web\\3.1.10\\microsoft.aspnetcore.components.web.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.10\\microsoft.aspnetcore.metadata.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.10\\microsoft.extensions.dependencyinjection.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.10\\microsoft.extensions.dependencyinjection.abstractions.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.10\\microsoft.extensions.logging.abstractions.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.extensions.options\\3.1.10\\microsoft.extensions.options.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.10\\microsoft.extensions.primitives.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\microsoft.jsinterop\\3.1.10\\microsoft.jsinterop.3.1.10.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\Eu\\.nuget\\packages\\t4webformsinjection\\3.0.0\\t4webformsinjection.3.0.0.nupkg.sha512"
->>>>>>> b7dc13bd7f8cd64351f75a21ff044a9c63a6c47a
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\iRebeca\\facultate\\.NET\\.NetProject\\TSense\\TsenseWebApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
