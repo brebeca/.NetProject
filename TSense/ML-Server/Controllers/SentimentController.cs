@@ -1,19 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.ML;
 using ML_Server.DataModels;
 using System.Collections.Generic;
+using Microsoft.ML;
 
 namespace ML_Server.Controllers
 {
-    [Route("api/v1/predictions")]
+    [Route("api/v2/predictions")]
     [ApiController]
-    public class SentimentSController : ControllerBase
+    public class SentimentController : ControllerBase
     {
-        public PredictionEnginePool<SentimentData, SentimentPrediction> PredictionEnginePool { get; }
+        public PredictionEngine<SentimentData, SentimentPrediction> PredictionEngine { get; }
 
-        public SentimentSController(PredictionEnginePool<SentimentData, SentimentPrediction> predictionEnginePool)
+        public SentimentController(PredictionEngine<SentimentData, SentimentPrediction> predictionEnginePool)
         {
-            PredictionEnginePool = predictionEnginePool;
+            PredictionEngine = predictionEnginePool;
         }
 
         [HttpPost]
@@ -24,14 +24,14 @@ namespace ML_Server.Controllers
                 return BadRequest();
             }
 
-            SentimentPrediction predictedValue = Prediction.Prediction.getPrediction(data, PredictionEnginePool);
+            SentimentPrediction predictedValue = PredictionEngine.Predict(data);
             return Ok(predictedValue);
         }
 
         [HttpPost("multiple")]
         public ActionResult<float> PostMultiple([FromBody] ICollection<SentimentData> texts)
         {
-            if (!ModelState.IsValid)
+           if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
@@ -42,7 +42,7 @@ namespace ML_Server.Controllers
             int countNegative = 0;
             foreach (SentimentData data in texts)
             {
-                SentimentPrediction predictedValue = Prediction.Prediction.getPrediction(data, PredictionEnginePool);
+                SentimentPrediction predictedValue = PredictionEngine.Predict(data);
                 if (predictedValue.Prediction == true) 
                 {
                     probabilityPositive += predictedValue.Probability;
@@ -56,7 +56,7 @@ namespace ML_Server.Controllers
                     
             }
 
-            if(probabilityNegative<probabilityPositive)
+            if(probabilityPositive >= probabilityNegative)
                 return Ok(new Sentiment(true,probabilityPositive/countPositive));
             else
                 return Ok(new Sentiment(false, probabilityNegative / countNegative));

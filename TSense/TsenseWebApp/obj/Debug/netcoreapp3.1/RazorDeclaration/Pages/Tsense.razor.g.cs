@@ -151,7 +151,7 @@ using TsenseWebApp.Config;
 
     protected async Task OnSubmitUser()
     {
-        //"Huawei" se va inlocui cu usernameul introdus
+       
         List<string> tweets = await TService.GetTweetsFromUser(user);
         JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
         sentiment3 = (bool)(mlPrediction)[Constants.Prediction];

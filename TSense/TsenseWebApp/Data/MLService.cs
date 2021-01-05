@@ -31,7 +31,6 @@ namespace TsenseWebApp.Data
             return data;
         }
 
-       
         public async Task<JObject> SentimentFromMultiple(List<string> texts)
         {
             List<Sentiment> body = (from string text in texts
