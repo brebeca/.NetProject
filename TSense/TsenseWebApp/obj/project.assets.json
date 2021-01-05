@@ -908,11 +908,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\iRebeca\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Eu\\.nuget\\packages\\": {}
+>>>>>>> b7dc13bd7f8cd64351f75a21ff044a9c63a6c47a
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\iRebeca\\facultate\\.NET\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
       "projectName": "TsenseWebApp",
       "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
@@ -921,6 +926,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\iRebeca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\Eu\\source\\repos\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+      "projectName": "TsenseWebApp",
+      "projectPath": "C:\\Users\\Eu\\source\\repos\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+      "packagesPath": "C:\\Users\\Eu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Eu\\source\\repos\\.NetProject\\TSense\\TsenseWebApp\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Eu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> b7dc13bd7f8cd64351f75a21ff044a9c63a6c47a
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -991,7 +1006,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+>>>>>>> b7dc13bd7f8cd64351f75a21ff044a9c63a6c47a
       }
     }
   }
