@@ -2,6 +2,7 @@
 using Microsoft.Extensions.ML;
 using ML_Server.DataModels;
 using System.Configuration;
+using ML_Server.Prediction;
 using System.Collections.Generic;
 
 namespace ML_Server.Controllers
@@ -24,7 +25,7 @@ namespace ML_Server.Controllers
                 return BadRequest();
             }
 
-            SentimentPrediction predictedValue = PredictionEnginePool.Predict(modelName: ConfigurationManager.AppSettings.Get("modelName"), example: data);
+            SentimentPrediction predictedValue = Prediction.Prediction.getPrediction(data, PredictionEnginePool);
             return Ok(predictedValue);
         }
 
@@ -42,7 +43,7 @@ namespace ML_Server.Controllers
             int countNegative = 0;
             foreach (SentimentData data in texts)
             {
-                SentimentPrediction predictedValue = PredictionEnginePool.Predict(modelName: ConfigurationManager.AppSettings.Get("modelName"), example: data);
+                SentimentPrediction predictedValue = Prediction.Prediction.getPrediction(data, PredictionEnginePool);
                 if (predictedValue.Sentiment == true) 
                 {
                     probabilityPositive += predictedValue.Probability;
