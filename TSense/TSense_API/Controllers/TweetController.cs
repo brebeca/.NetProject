@@ -7,17 +7,20 @@ using System.Threading.Tasks;
 using TSense_API.Models;
 using System.Configuration;
 using TSense_API.Configs;
+using System;
+using System.Net;
+using System.Web.Http;
 
 namespace API.Controllers
 {
     [ApiController]
-    [Route("twitter_api/")]
-    public class TweetController
+    [Microsoft.AspNetCore.Mvc.Route("twitter_api/")]
+    public class TweetController : ControllerBase
     {
         Token token = new Token();
 
-        [HttpGet("tweet")]
-        public async Task<string> Get(string tweetLink)
+        [Microsoft.AspNetCore.Mvc.HttpGet("tweet")]
+        public async Task<IActionResult> Get(string tweetLink)
         {
             using (var httpClient = new HttpClient())
             {
@@ -30,14 +33,21 @@ namespace API.Controllers
                     request.Headers.TryAddWithoutValidation("Authorization", "Bearer " + token.BearerToken);
 
                     var response = await httpClient.SendAsync(request);
-
-                    return (string)JObject.Parse(response.Content.ReadAsStringAsync().Result)[Constants.Data][Constants.Text];
+                    try
+                    {
+                        var tweetText = (string)JObject.Parse(response.Content.ReadAsStringAsync().Result)[Constants.Data][Constants.Text];
+                        return Ok(tweetText);
+                    }
+                    catch(Exception)
+                    {
+                        return NotFound("Wrong link");
+                    }
                 }
             }
         }
 
-        [HttpGet("tweet_all")]
-        public async Task<string> GetAll(string username)
+        [Microsoft.AspNetCore.Mvc.HttpGet("tweet_all")]
+        public async Task<IActionResult> GetAll(string username)
         {
             List<string> resultArray = new List<string>();
             using (var httpClient = new HttpClient())
@@ -55,15 +65,22 @@ namespace API.Controllers
                         request.Headers.TryAddWithoutValidation("Authorization", "Bearer " + token.BearerToken);
 
                         var response = await httpClient.SendAsync(request);
-                        var tweetsArray = JArray.Parse(response.Content.ReadAsStringAsync().Result);
-                        foreach (var element in tweetsArray)
+                        try
                         {
-                            resultArray.Add((string)element[Constants.Text]);
+                            var tweetsArray = JArray.Parse(response.Content.ReadAsStringAsync().Result);
+                            foreach (var element in tweetsArray)
+                            {
+                                resultArray.Add((string)element[Constants.Text]);
+                            }
+                        }
+                        catch(Exception)
+                        {
+                            return NotFound("Wrong username");
                         }
                         
                     }
                 }
-                return JsonConvert.SerializeObject(resultArray);
+                return Ok(JsonConvert.SerializeObject(resultArray));
             }
         }
     }
