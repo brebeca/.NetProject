@@ -5,7 +5,7 @@ using Microsoft.ML;
 
 namespace ML_Server.Controllers
 {
-    [Route("api/v2/predictions")]
+    [Route("api2/v2/predictions")]
     [ApiController]
     public class SentimentController : ControllerBase
     {

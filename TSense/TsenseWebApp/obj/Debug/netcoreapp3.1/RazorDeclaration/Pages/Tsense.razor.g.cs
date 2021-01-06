@@ -119,7 +119,7 @@ using TsenseWebApp.Config;
     string user = "";
     string result = "";
     string text2 = "";
-    bool sentiment1 = true;
+    bool sentiment1 =true;
     bool sentiment2 = true;
     bool sentiment3 = true;
 
@@ -151,7 +151,7 @@ using TsenseWebApp.Config;
 
     protected async Task OnSubmitUser()
     {
-       
+
         List<string> tweets = await TService.GetTweetsFromUser(user);
         JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
         sentiment3 = (bool)(mlPrediction)[Constants.Prediction];

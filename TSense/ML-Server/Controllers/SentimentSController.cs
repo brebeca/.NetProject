@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.ML;
 using ML_Server.DataModels;
+using System.Configuration;
 using System.Collections.Generic;
 
 namespace ML_Server.Controllers
@@ -10,7 +11,6 @@ namespace ML_Server.Controllers
     public class SentimentSController : ControllerBase
     {
         public PredictionEnginePool<SentimentData, SentimentPrediction> PredictionEnginePool { get; }
-
         public SentimentSController(PredictionEnginePool<SentimentData, SentimentPrediction> predictionEnginePool)
         {
             PredictionEnginePool = predictionEnginePool;
@@ -24,7 +24,7 @@ namespace ML_Server.Controllers
                 return BadRequest();
             }
 
-            SentimentPrediction predictedValue = Prediction.Prediction.getPrediction(data, PredictionEnginePool);
+            SentimentPrediction predictedValue = PredictionEnginePool.Predict(modelName: ConfigurationManager.AppSettings.Get("modelName"), example: data);
             return Ok(predictedValue);
         }
 
@@ -42,24 +42,24 @@ namespace ML_Server.Controllers
             int countNegative = 0;
             foreach (SentimentData data in texts)
             {
-                SentimentPrediction predictedValue = Prediction.Prediction.getPrediction(data, PredictionEnginePool);
-                if (predictedValue.Prediction == true) 
+                SentimentPrediction predictedValue = PredictionEnginePool.Predict(modelName: ConfigurationManager.AppSettings.Get("modelName"), example: data);
+                if (predictedValue.Sentiment == true)
                 {
                     probabilityPositive += predictedValue.Probability;
-                    countPositive ++ ;
+                    countPositive++;
                 }
-                else 
+                else
                 {
                     probabilityNegative += predictedValue.Probability;
-                    countNegative ++;
+                    countNegative++;
                 }
-                    
+
             }
 
-            if(probabilityNegative<probabilityPositive)
-                return Ok(new Sentiment(true,probabilityPositive/countPositive));
+            if (probabilityNegative < probabilityPositive)
+                return Ok(new Sentiment(true, probabilityPositive / countPositive));
             else
-                return Ok(new Sentiment(false, probabilityNegative / countNegative));
+                return Ok(new Sentiment(true, probabilityNegative / countNegative));
         }
 
     }
