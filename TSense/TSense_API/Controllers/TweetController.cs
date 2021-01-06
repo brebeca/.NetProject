@@ -10,6 +10,7 @@ using TSense_API.Configs;
 using System;
 using System.Net;
 using System.Web.Http;
+using System.Text.RegularExpressions;
 
 namespace API.Controllers
 {
@@ -22,6 +23,10 @@ namespace API.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet("tweet")]
         public async Task<IActionResult> Get(string tweetLink)
         {
+            string pattern = @"https://twitter.com/[a-zA-z0-9]+/status/[0-9]+";
+            Regex re = new Regex(pattern);
+            if (!re.IsMatch(tweetLink)) 
+                return NotFound("Wrong link");
             using (var httpClient = new HttpClient())
             {
                 string[] linkList = tweetLink.Split(Constants.BackSlash);
