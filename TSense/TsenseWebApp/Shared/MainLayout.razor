@@ -4,13 +4,23 @@
     <NavMenu />
 </div>*@
 
+    <MatAppBarContainer Style="width: auto;">
+        <MatAppBar Fixed="true">
+            <MatAppBarRow>
+                <MatAppBarSection>
+                    <MatAppBarTitle>TSense - Web Sentiment Analysis Tool with ML .NET</MatAppBarTitle>
+                </MatAppBarSection>
+                <MatAppBarSection Align="@MatAppBarSectionAlign.End">
+                    <MatIconButton Link="https://github.com/brebeca/.NetProject">
+                        <MatIcon>@MatIconNames.Alternate_email</MatIcon>
+                    </MatIconButton>
+                </MatAppBarSection>
+            </MatAppBarRow>
+        </MatAppBar>
+    </MatAppBarContainer>
 <div class="main">
-    <div class="top-row px-4">
-        <span style="text-align:left">TSense</span>
-        <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-    </div>
 
-    <div class="content px-4">
-        @Body
-    </div>
+        <div class="content px-4">
+            @Body
+        </div>
 </div>

@@ -9,9 +9,9 @@
 <div class="mat-layout-grid mat-layout-grid-align-left">
     <div class="mat-layout-grid-inner">
         <div class="mat-layout-grid-cell">
-            <MatCard Style="width: 400px; min-height: 600px; height:auto;" class="demo-mat-card">
-                <MatHeadline6 Style="text-align: center">Option 1</MatHeadline6>
-                <MatCardContent Style="display: flex; justify-content: center; align-items: center; flex-direction: column" class="demo-mat-card-content">
+            <MatCard class="demo-mat-card">
+                <MatHeadline6 Style="text-align: center">Analyze Tweet</MatHeadline6>
+                <MatCardContent class="demo-mat-card-content">
                         <MatBody1>
                             <EditForm Model="tweet" OnSubmit="OnSubmitLink">
                                 <MatTextField ValidationDisabled="true" Label="Link to Tweet" @bind-Value="tweet.Link" />
@@ -49,10 +49,9 @@
             </MatCard>
         </div>
         <div class="mat-layout-grid-cell">
-            <MatCard Style="width: 400px; min-height: 600px; height:auto;" class="demo-mat-card">
-                <MatHeadline6 Style="text-align: center">Option 2</MatHeadline6>
-                <MatCardContent>
-                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column" class="demo-mat-card-content">
+            <MatCard class="demo-mat-card">
+                <MatHeadline6 Style="text-align: center">Analyze Text</MatHeadline6>
+                <MatCardContent class="demo-mat-card-content">
                         <MatBody1>
                             <EditForm Model="tweet" OnSubmit="OnSubmitText">
                                 <MatTextField ValidationDisabled="true" Label="Insert Text" @bind-Value="text2" />
@@ -86,15 +85,13 @@
                                 </div>
                             }
                         </MatBody1>
-                    </div>
                 </MatCardContent>
             </MatCard>
         </div>
         <div class="mat-layout-grid-cell">
-            <MatCard Style="width: 400px; min-height: 600px; height:auto;" class="demo-mat-card-clean-margin">
-                <MatHeadline6 Style="text-align: center">Option 3</MatHeadline6>
-                <MatCardContent>
-                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column" class="demo-mat-card-content">
+            <MatCard class="demo-mat-card">
+                <MatHeadline6 Style="text-align: center">Analyze Profile</MatHeadline6>
+                <MatCardContent class="demo-mat-card-content">
                         <MatBody1>
                             <EditForm Model="tweet" OnSubmit="OnSubmitUser">
                                 <MatTextField ValidationDisabled="true" Label="Insert Username" @bind-Value="user" />
@@ -135,7 +132,6 @@
                                 </div>
                             }
                         </MatBody1>
-                    </div>
                 </MatCardContent>
             </MatCard>
         </div>
