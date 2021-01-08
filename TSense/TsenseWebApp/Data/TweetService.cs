@@ -17,7 +17,7 @@ namespace TsenseWebApp.Data
 
         public async Task<string> GetTextFromTweet(string link)
         {
-            string url =Constants.TweetFromLinkUrl  + link;
+            string url = Constants.TweetFromLinkUrl + link;
             var response = await httpClient.GetAsync(url);
             if (response.StatusCode == (System.Net.HttpStatusCode)404)
                 return "Wrong link";

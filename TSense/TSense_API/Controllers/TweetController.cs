@@ -5,10 +5,8 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using TSense_API.Models;
-using System.Configuration;
 using TSense_API.Configs;
 using System;
-using System.Net;
 using System.Web.Http;
 using System.Text.RegularExpressions;
 
