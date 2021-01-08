@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\Tests\\Tests.csproj": {}
+    "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj": {
+    "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj",
+        "projectUniqueName": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj",
         "projectName": "ML-Server",
-        "projectPath": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj",
-        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\ML-Server\\obj\\",
+        "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj",
+        "packagesPath": "C:\\Users\\iRebeca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\ML-Server\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\iRebeca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -67,6 +63,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -75,26 +81,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\Tests\\Tests.csproj": {
+    "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\Tests\\Tests.csproj",
+        "projectUniqueName": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\Tests\\Tests.csproj",
         "projectName": "Tests",
-        "projectPath": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\Tests\\Tests.csproj",
-        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\Tests\\obj\\",
+        "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\Tests\\Tests.csproj",
+        "packagesPath": "C:\\Users\\iRebeca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\Tests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\iRebeca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -107,14 +109,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj": {
-                "projectPath": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj"
+              "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj": {
+                "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\ML-Server\\ML-Server.csproj"
               },
-              "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {
-                "projectPath": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj"
+              "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {
+                "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj"
               },
-              "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj": {
-                "projectPath": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj"
+              "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj": {
+                "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj"
               }
             }
           }
@@ -156,6 +158,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -164,26 +172,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {
+    "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
         "projectName": "TsenseWebApp",
-        "projectPath": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
-        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TsenseWebApp\\obj\\",
+        "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TsenseWebApp\\TsenseWebApp.csproj",
+        "packagesPath": "C:\\Users\\iRebeca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TsenseWebApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\iRebeca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -235,6 +239,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -243,26 +257,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj": {
+    "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj",
+        "projectUniqueName": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj",
         "projectName": "TSense_API",
-        "projectPath": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj",
-        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultate\\Anul III Semestrul I\\.NET\\TSense\\.NetProject\\TSense\\TSense_API\\obj\\",
+        "projectPath": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TSense_API\\TSense_API.csproj",
+        "packagesPath": "C:\\Users\\iRebeca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\iRebeca\\facultate\\.NET\\v3\\.NetProject\\TSense\\TSense_API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\iRebeca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -310,6 +320,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -318,7 +338,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

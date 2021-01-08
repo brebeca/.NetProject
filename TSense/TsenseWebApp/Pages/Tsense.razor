@@ -162,30 +162,50 @@
     protected async Task OnSubmitLink()
     {
         result = await TService.GetTextFromTweet(tweet.Link);
-        JObject mlPrediction = await MService.SentimentFromLink(result);
-        sentiment1 = (bool)(mlPrediction)[Constants.Prediction];
-        probability1 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
+        if (result != "Wrong link")
+        {
+            JObject mlPrediction = await MService.SentimentFromLink(result);
+            sentiment1 = (bool)(mlPrediction)[Constants.Prediction];
+            probability1 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
 
+        }
+        else
+        {
+            //de tratat caz in care nu exista username
+        }
         ShowImage1 = false;
+
+
     }
 
-    protected async Task OnSubmitText()
-    {
-        JObject mlPrediction = await MService.SentimentFromText(text2);
-        sentiment2 = (bool)(mlPrediction)[Constants.Prediction];
-        probability2 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
-        ShowImage2 = false;
-    }
 
     protected async Task OnSubmitUser()
     {
 
+
         List<string> tweets = await TService.GetTweetsFromUser(user);
-        JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
-        sentiment3 = (bool)(mlPrediction)[Constants.Prediction];
-        probability3 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
+        if (tweets.Contains("Wrong username"))
+        {
+            JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
+            sentiment3 = (bool)(mlPrediction)[Constants.Prediction];
+            probability3 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
+
+        }
+        else
+        {
+            //tratat caz in care nu exista username
+        }
         ShowImage3 = false;
 
+
+    }
+    protected async Task OnSubmitText()
+    {
+
+        JObject mlPrediction = await MService.SentimentFromText(text2);
+        sentiment2 = (bool)(mlPrediction)[Constants.Prediction];
+        probability2 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
+        ShowImage2 = false;
     }
 
 }

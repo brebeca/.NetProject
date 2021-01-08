@@ -246,3 +246,47 @@ D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TSense_API\bin\
 D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Web.Http.dll
 D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Web.Http.WebHost.dll
 D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\Configs\App.config
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.exe
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.dll.config
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.deps.json
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.runtimeconfig.json
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.runtimeconfig.dev.json
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\TSense_API.pdb
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Web.Http.WebHost.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.csprojAssemblyReference.cache
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.AssemblyInfoInputs.cache
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.AssemblyInfo.cs
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.csproj.CoreCompileInputs.cache
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\staticwebassets\TSense_API.StaticWebAssets.Manifest.cache
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\staticwebassets\TSense_API.StaticWebAssets.xml
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\scopedcss\bundle\TSense_API.styles.css
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.RazorTargetAssemblyInfo.cache
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.csproj.CopyComplete
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.dll
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.pdb
+C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TSense_API\obj\Debug\netcoreapp3.1\TSense_API.genruntimeconfig.cache
