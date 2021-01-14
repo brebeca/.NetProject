@@ -21,7 +21,10 @@
                     </MatBody1>
                     <br />
                     <MatBody1 class="matbody1">
-                        <div><span id="error1">@error1</span></div>
+                        @if (error1.Count() > 0)
+                        {
+                            <div style="padding:10%"><span class="error" id="error1">@error1</span></div>
+                        }                 
                         @if (ShowImage1 == false)
                         {
                             <div id="text">
@@ -62,7 +65,10 @@
                     </MatBody1>
                     <br />
                     <MatBody1 class="matbody1">
-                        <div><span id="error2">@error2</span></div>
+                        @if (error2.Count() > 0)
+                        {
+                            <div style="padding:10%"><span class="error" id="error2">@error2</span></div>
+                        }                        
                         @if (ShowImage2 == false)
                         {
                             <div id="text">
@@ -103,7 +109,10 @@
                     </MatBody1>
                     <br />
                     <MatBody1 class="matbody1">
-                        <div><span id="error3">@error3</span></div>
+                        @if (error3.Count() > 0)
+                        {
+                        <div style="padding:10%"><span class="error" id="error3">@error3</span></div>
+                        }
                         @if (ShowImage3 == false)
                         {
                             <div id="text">
@@ -171,7 +180,7 @@
     {
         if (!String.Equals(tweet.Link, null))
         {
-            if ((tweet.Link.Count() > 0))
+            if ((tweet.Link.Count() > 0) && (!tweet.Link.Contains(" ")))
             {
                 result = await TService.GetTextFromTweet(tweet.Link);
                 if (result != "Wrong link")
@@ -201,15 +210,16 @@
 
     protected async Task OnSubmitUser()
     {
-        if (user.Count() > 0)
+        if (user.Count() > 0 && (!user.Contains(" ")))
         {
             List<string> tweets = await TService.GetTweetsFromUser(user);
-            if (tweets.Contains("Wrong username"))
+            if (!tweets.Contains("Wrong username"))
             {
                 JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
                 sentiment3 = (bool)(mlPrediction)[Constants.Prediction];
                 probability3 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
                 ShowImage3 = false;
+                error3 = "";
             }
             else
             {
