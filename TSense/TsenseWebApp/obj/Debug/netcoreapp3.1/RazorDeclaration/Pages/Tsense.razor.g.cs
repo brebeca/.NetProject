@@ -13,91 +13,91 @@ namespace TsenseWebApp.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 1 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 2 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 3 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 4 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 5 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 6 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 7 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 8 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using TsenseWebApp;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 9 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using TsenseWebApp.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\_Imports.razor"
+#line 10 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\_Imports.razor"
 using MatBlazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
+#line 2 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
 using TsenseWebApp.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
+#line 3 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
 using Newtonsoft.Json.Linq;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
+#line 4 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
 using TsenseWebApp.Config;
 
 #line default
@@ -112,7 +112,7 @@ using TsenseWebApp.Config;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 144 "C:\Users\iRebeca\facultate\.NET\v3\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
+#line 144 "D:\Facultate\Anul III Semestrul I\.NET\TSense\.NetProject\TSense\TsenseWebApp\Pages\Tsense.razor"
        
 
     Tweet tweet = new Tweet();
@@ -141,11 +141,36 @@ using TsenseWebApp.Config;
             probability1 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
 
         }
+        else
+        {
+            //de tratat caz in care nu exista username
+        }
         ShowImage1 = false;
 
 
     }
 
+
+    protected async Task OnSubmitUser()
+    {
+
+
+        List<string> tweets = await TService.GetTweetsFromUser(user);
+        if (tweets.Contains("Wrong username"))
+        {
+            JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
+            sentiment3 = (bool)(mlPrediction)[Constants.Prediction];
+            probability3 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
+
+        }
+        else
+        {
+            //tratat caz in care nu exista username
+        }
+        ShowImage3 = false;
+
+
+    }
     protected async Task OnSubmitText()
     {
 
@@ -153,24 +178,6 @@ using TsenseWebApp.Config;
         sentiment2 = (bool)(mlPrediction)[Constants.Prediction];
         probability2 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
         ShowImage2 = false;
-    }
-
-    protected async Task OnSubmitUser()
-    {
-
-
-        List<string> tweets = await TService.GetTweetsFromUser(user);
-        if(tweets.Contains("Wrong username"))
-        {
-            JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
-            sentiment3 = (bool)(mlPrediction)[Constants.Prediction];
-            probability3 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
-
-        }
-        ShowImage3 = false;
-
-
-
     }
 
 
