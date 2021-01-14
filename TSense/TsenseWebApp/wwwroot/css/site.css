@@ -7,6 +7,11 @@ html, body {
     width:auto;
 }
 
+.matbody1 {
+    width: 300px;
+    padding-right: 3%;
+    padding-left: 3%;
+}
 .demo-mat-card {
     width: auto;
     max-width: 400px;

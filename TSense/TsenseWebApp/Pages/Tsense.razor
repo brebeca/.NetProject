@@ -12,39 +12,40 @@
             <MatCard class="demo-mat-card">
                 <MatHeadline6 Style="text-align: center">Analyze Tweet</MatHeadline6>
                 <MatCardContent class="demo-mat-card-content">
-                        <MatBody1>
-                            <EditForm Model="tweet" OnSubmit="OnSubmitLink">
-                                <MatTextField ValidationDisabled="true" Label="Link to Tweet" @bind-Value="tweet.Link" />
-                                <br />
-                                <MatButton Style="float: right" Icon="fingerprint" Type="submit" Raised="true">Submit!</MatButton>
-                            </EditForm>
-                        </MatBody1>
-                        <br />
-                        <MatBody1 Style="width: 300px; padding-right: 3%; padding-left: 3%">
-                            @if (ShowImage1 == false)
-                            {
-                                <div id="text">
-                                    <MatHeadline6 class="demo-mat-card-clean-margin">Your text</MatHeadline6>
-                                    <span id="result">@result</span>
-                                </div>
-                                <br />
-                                <div id="text">
-                                    <MatHeadline6 class="demo-mat-card-clean-margin">Positivity: @(probability1*100)%</MatHeadline6>
-                                    <MatProgressBar Progress="@probability1"></MatProgressBar>
-                                </div>
-                                <br />
-                                <div id="sentiment">
-                                    @if (@sentiment1.Equals(true))
-                                    {
-                                        <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
-                                    }
-                                    else
-                                    {
-                                        <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
-                                    }
-                                </div>
-                            }
-                        </MatBody1>
+                    <MatBody1>
+                        <EditForm Model="tweet" OnSubmit="OnSubmitLink">
+                            <MatTextField ValidationDisabled="true" Label="Link to Tweet" @bind-Value="tweet.Link" />
+                            <br />
+                            <MatButton Style="float: right" Icon="fingerprint" Type="submit" Raised="true">Submit!</MatButton>
+                        </EditForm>
+                    </MatBody1>
+                    <br />
+                    <MatBody1 class="matbody1">
+                        <div><span id="error1">@error1</span></div>
+                        @if (ShowImage1 == false)
+                        {
+                            <div id="text">
+                                <MatHeadline6 class="demo-mat-card-clean-margin">Your text</MatHeadline6>
+                                <span id="result">@result</span>
+                            </div>
+                            <br />
+                            <div id="text">
+                                <MatHeadline6 class="demo-mat-card-clean-margin">Positivity: @(probability1*100)%</MatHeadline6>
+                                <MatProgressBar Progress="@probability1"></MatProgressBar>
+                            </div>
+                            <br />
+                            <div id="sentiment">
+                                @if (@sentiment1.Equals(true))
+                                {
+                                    <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                }
+                                else
+                                {
+                                    <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                }
+                            </div>
+                        }
+                    </MatBody1>
                 </MatCardContent>
             </MatCard>
         </div>
@@ -52,39 +53,40 @@
             <MatCard class="demo-mat-card">
                 <MatHeadline6 Style="text-align: center">Analyze Text</MatHeadline6>
                 <MatCardContent class="demo-mat-card-content">
-                        <MatBody1>
-                            <EditForm Model="tweet" OnSubmit="OnSubmitText">
-                                <MatTextField ValidationDisabled="true" Label="Insert Text" @bind-Value="text2" />
-                                <br />
-                                <MatButton Style="float: right" Icon="fingerprint" Type="submit" Raised="true">Submit!</MatButton>
-                            </EditForm>
-                        </MatBody1>
-                        <br />
-                        <MatBody1 Style="width: 300px; padding-right: 3%; padding-left: 3%">
-                            @if (ShowImage2 == false)
-                            {
-                                <div id="text">
-                                    <MatHeadline6 class="demo-mat-card-clean-margin">Your text</MatHeadline6>
-                                    <span id="result">@text2</span>
-                                </div>
-                                <br />
-                                <div id="text">
-                                    <MatHeadline6 class="demo-mat-card-clean-margin">Positivity: @(probability2*100)%</MatHeadline6>
-                                    <MatProgressBar Progress="@probability2"></MatProgressBar>
-                                </div>
-                                <br />
-                                <div id="sentiment">
-                                    @if (@sentiment2.Equals(true))
-                                    {
-                                        <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
-                                    }
-                                    else
-                                    {
-                                        <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
-                                    }
-                                </div>
-                            }
-                        </MatBody1>
+                    <MatBody1>
+                        <EditForm Model="tweet" OnSubmit="OnSubmitText">
+                            <MatTextField ValidationDisabled="true" Label="Insert Text" @bind-Value="text2" />
+                            <br />
+                            <MatButton Style="float: right" Icon="fingerprint" Type="submit" Raised="true">Submit!</MatButton>
+                        </EditForm>
+                    </MatBody1>
+                    <br />
+                    <MatBody1 class="matbody1">
+                        <div><span id="error2">@error2</span></div>
+                        @if (ShowImage2 == false)
+                        {
+                            <div id="text">
+                                <MatHeadline6 class="demo-mat-card-clean-margin">Your text</MatHeadline6>
+                                <span id="result">@text2</span>
+                            </div>
+                            <br />
+                            <div id="text">
+                                <MatHeadline6 class="demo-mat-card-clean-margin">Positivity: @(probability2*100)%</MatHeadline6>
+                                <MatProgressBar Progress="@probability2"></MatProgressBar>
+                            </div>
+                            <br />
+                            <div id="sentiment">
+                                @if (@sentiment2.Equals(true))
+                                {
+                                    <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                }
+                                else
+                                {
+                                    <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                }
+                            </div>
+                        }
+                    </MatBody1>
                 </MatCardContent>
             </MatCard>
         </div>
@@ -92,17 +94,18 @@
             <MatCard class="demo-mat-card">
                 <MatHeadline6 Style="text-align: center">Analyze Profile</MatHeadline6>
                 <MatCardContent class="demo-mat-card-content">
-                        <MatBody1>
-                            <EditForm Model="tweet" OnSubmit="OnSubmitUser">
-                                <MatTextField ValidationDisabled="true" Label="Insert Username" @bind-Value="user" />
-                                <br />
-                                <MatButton Style="float: right" Icon="fingerprint" Type="submit" Raised="true">Submit!</MatButton>
-                            </EditForm>
-                        </MatBody1>
-                        <br />
-                        <MatBody1 Style="width: 300px; padding-right: 3%; padding-left: 3%">
-                            @if (ShowImage3 == false)
-                            {
+                    <MatBody1>
+                        <EditForm Model="tweet" OnSubmit="OnSubmitUser">
+                            <MatTextField ValidationDisabled="true" Label="Insert Username" @bind-Value="user" />
+                            <br />
+                            <MatButton Style="float: right" Icon="fingerprint" Type="submit" Raised="true">Submit!</MatButton>
+                        </EditForm>
+                    </MatBody1>
+                    <br />
+                    <MatBody1 class="matbody1">
+                        <div><span id="error3">@error3</span></div>
+                        @if (ShowImage3 == false)
+                        {
                             <div id="text">
                                 <MatHeadline4 class="demo-mat-card-clean-margin">@user's Vibe</MatHeadline4>
                                 @if (@sentiment3.Equals(true))
@@ -114,24 +117,24 @@
                                     <MatHeadline6 class="demo-mat-card-clean-margin">Negative!</MatHeadline6>
                                 }
                             </div>
-                                <br />
-                                <div id="text">
-                                    <MatHeadline6 class="demo-mat-card-clean-margin">Positivity: @(probability3*100)%</MatHeadline6>
-                                    <MatProgressBar Progress="@probability3"></MatProgressBar>
-                                </div>
-                                <br />
-                                <div id="sentiment">
-                                    @if (@sentiment3.Equals(true))
-                                    {
-                                        <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
-                                    }
-                                    else
-                                    {
-                                        <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
-                                    }
-                                </div>
-                            }
-                        </MatBody1>
+                            <br />
+                            <div id="text">
+                                <MatHeadline6 class="demo-mat-card-clean-margin">Positivity: @(probability3*100)%</MatHeadline6>
+                                <MatProgressBar Progress="@probability3"></MatProgressBar>
+                            </div>
+                            <br />
+                            <div id="sentiment">
+                                @if (@sentiment3.Equals(true))
+                                {
+                                    <img src="/css/Images/pozitiv.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                }
+                                else
+                                {
+                                    <img src="/css/Images/negative.jpg" class="image" alt="Sample Image Pozitive" width="80%" />
+                                }
+                            </div>
+                        }
+                    </MatBody1>
                 </MatCardContent>
             </MatCard>
         </div>
@@ -147,7 +150,12 @@
     string user = "";
     string result = "";
     string text2 = "";
-    bool sentiment1 =true;
+
+    string error1 = "";
+    string error2 = "";
+    string error3 = "";
+
+    bool sentiment1 = true;
     bool sentiment2 = true;
     bool sentiment3 = true;
 
@@ -161,51 +169,77 @@
 
     protected async Task OnSubmitLink()
     {
-        result = await TService.GetTextFromTweet(tweet.Link);
-        if (result != "Wrong link")
+        if (!String.Equals(tweet.Link, null))
         {
-            JObject mlPrediction = await MService.SentimentFromLink(result);
-            sentiment1 = (bool)(mlPrediction)[Constants.Prediction];
-            probability1 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
-
+            if ((tweet.Link.Count() > 0))
+            {
+                result = await TService.GetTextFromTweet(tweet.Link);
+                if (result != "Wrong link")
+                {
+                    JObject mlPrediction = await MService.SentimentFromLink(result);
+                    sentiment1 = (bool)(mlPrediction)[Constants.Prediction];
+                    probability1 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
+                    ShowImage1 = false;
+                    error1 = "";
+                }
+                else
+                {
+                    error1 = "Enter a valid link!";
+                    ShowImage1 = true;
+                }
+            }
+            else
+            {
+                error1 = "Enter a link!";
+                ShowImage1 = true;
+            }
         }
         else
-        {
-            //de tratat caz in care nu exista username
-        }
-        ShowImage1 = false;
-
-
+        { error1 = "Enter a link!"; }
     }
 
 
     protected async Task OnSubmitUser()
     {
-
-
-        List<string> tweets = await TService.GetTweetsFromUser(user);
-        if (tweets.Contains("Wrong username"))
+        if (user.Count() > 0)
         {
-            JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
-            sentiment3 = (bool)(mlPrediction)[Constants.Prediction];
-            probability3 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
-
+            List<string> tweets = await TService.GetTweetsFromUser(user);
+            if (tweets.Contains("Wrong username"))
+            {
+                JObject mlPrediction = await MService.SentimentFromMultiple(tweets);
+                sentiment3 = (bool)(mlPrediction)[Constants.Prediction];
+                probability3 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
+                ShowImage3 = false;
+            }
+            else
+            {
+                error3 = "Wrong Username!";
+                ShowImage3 = true;
+            }
         }
         else
         {
-            //tratat caz in care nu exista username
+            error3 = "Enter a username!";
+            ShowImage3 = true;
         }
-        ShowImage3 = false;
 
 
     }
     protected async Task OnSubmitText()
     {
-
-        JObject mlPrediction = await MService.SentimentFromText(text2);
-        sentiment2 = (bool)(mlPrediction)[Constants.Prediction];
-        probability2 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
-        ShowImage2 = false;
+        if (text2.Count() > 0)
+        {
+            JObject mlPrediction = await MService.SentimentFromText(text2);
+            sentiment2 = (bool)(mlPrediction)[Constants.Prediction];
+            probability2 = Math.Round((double)(mlPrediction)[Constants.Probability], Constants.NumberOfDecimals);
+            ShowImage2 = false;
+            error2 = "";
+        }
+        else
+        {
+            error2 = "Write something!";
+            ShowImage2 = true;
+        }
     }
 
 }
